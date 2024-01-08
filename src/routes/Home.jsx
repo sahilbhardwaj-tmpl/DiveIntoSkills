@@ -3,6 +3,8 @@ import HeroSection from '../components/HeroSection'
 import Card from '../components/Card'
 import { Link } from 'react-router-dom'
 import NewsLetterPopUp from '../components/NewsLetterPopUp'
+import CardData from '../components/CardData'
+import CardBuilder from '../components/CardBuilder'
 
 function Home() {
   return (
@@ -10,7 +12,19 @@ function Home() {
       <HeroSection />
       <div style={{ textAlign: 'center', }}>
         <h2 style={{ fontWeight: '700', fontSize: '34px', textAlign: 'center', padding: '20px' }}>Latest Blogs</h2>
-        <Card />
+        <div style={{display:'flex'}}>
+          {CardData.map((data, indx) => {
+            return (
+
+              <CardBuilder key={indx}
+                img={data.blogImg}
+                title={data.title}
+                description={data.description}
+                date={data.date}
+                author={data.author} />
+            )
+          })}
+        </div>
         <Link to='/Blogs'>
           <button className='btn-styles' style={{
             cursor: 'pointer',
@@ -20,7 +34,19 @@ function Home() {
           }}>Read More</button >
         </Link>
         <h2 style={{ fontWeight: '700', fontSize: '34px', textAlign: 'center', padding: '20px' }}>Latest Courses</h2>
-        <Card />
+        <div style={{display:'flex'}}>
+          {CardData.map((data, indx) => {
+            return (
+
+              <CardBuilder key={indx}
+                img={data.blogImg}
+                title={data.title}
+                description={data.description}
+                date={data.date}
+                author={data.author} />
+            )
+          })}
+        </div>
         <Link to='/latestCourses'>
           <button className='btn-styles' style={{
             cursor: 'pointer',
