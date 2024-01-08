@@ -20,7 +20,7 @@
   .blog-card {
     width: calc(33.33% - 20px); 
     max-height: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   
   /* Responsive layout adjustments */
