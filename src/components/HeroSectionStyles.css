@@ -1,0 +1,51 @@
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(90deg, #183114 0.75%, #446129 100%);
+    
+  }
+  
+  .textContainer {
+    width: 60%;
+  }
+  
+  .image-container {
+    width: 40%;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      padding: 20px; /* Adjust padding for small screens */
+    }
+  
+    .text-container,
+    .image-container {
+      width: 100%; /* Take full width on small screens */
+      margin-bottom: 20px; /* Add margin between elements */
+    }
+  
+    h1 {
+      font-size: 1.5em; /* Further adjusted font size for heading on small screens */
+    }
+  
+    p {
+      font-size: 0.9em; /* Further adjusted font size for paragraph on small screens */
+    }
+  }
