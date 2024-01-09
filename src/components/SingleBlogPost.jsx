@@ -83,9 +83,9 @@ function SingleBlogPost() {
                     </svg>
                 </div>
             </div>
-            <div className='related-blogs'>
-                <h2 style={{ textAlign: 'center' }}>Read Related Blogs</h2>
-                <div style={{ display: 'flex' }}>
+            <div >
+                <h2 style={{ textAlign: 'center',marginTop:'60px' }}>Read Related Blogs</h2>
+                <div className='related-blogs'>
                     {CardData.slice(0, 4).map((data, indx) => {
                         return (
 
