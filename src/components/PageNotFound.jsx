@@ -1,6 +1,11 @@
 import React from 'react'
 
 const PageNotFound = () => {
+  (function () {
+    window.scrollTo({
+      top: 0,
+    });
+  })()
   return (
     <>
     <div>pageNotFound</div>

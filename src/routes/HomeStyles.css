@@ -1,0 +1,14 @@
+.Latest-blog-cards{
+    display:flex;
+    justify-content: center;
+    
+}
+a{
+    color: black;
+}
+@media (max-width: 768px) {
+    .Latest-blog-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+}
