@@ -1,7 +1,6 @@
 import React from 'react'
 import './CardBuilderStyles.css'
 function Card(props) {
-  console.log(props);
   return (
     <div className="card">
       <img src={props.img} alt={'blog Image'} className="card-image" />
