@@ -4,6 +4,7 @@ import Home from './routes/Home'
 import AboutUs from './routes/AboutUs'
 import Contact from './routes/ContactUs'
 import Blogs from './routes/Blogs'
+import SingleBlog from './routes/SingleBlog';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PageNotFound from './components/pageNotFound';
@@ -21,6 +22,7 @@ function App() {
             <Route path="/About" element={<AboutUs />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Blogs" element={<Blogs />} />
+            <Route path="/SinglePost" element={<SingleBlog />} />
             <Route path="*"  element={<PageNotFound/>}/>
           </Routes>
         </div>
