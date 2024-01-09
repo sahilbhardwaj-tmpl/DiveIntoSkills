@@ -7,13 +7,18 @@ import CardData from '../components/CardData'
 import CardBuilder from '../components/CardBuilder'
 
 function Home() {
+  (function() {
+    window.scrollTo({
+      top: 0,
+    });
+  })()
   return (
     <>
       <HeroSection />
       <div style={{ textAlign: 'center', }}>
         <h2 style={{ fontWeight: '700', fontSize: '34px', textAlign: 'center', padding: '20px' }}>Latest Blogs</h2>
         <div style={{display:'flex'}}>
-          {CardData.map((data, indx) => {
+          {CardData.slice(0,4).map((data, indx) => {
             return (
 
               <CardBuilder key={indx}
@@ -35,7 +40,7 @@ function Home() {
         </Link>
         <h2 style={{ fontWeight: '700', fontSize: '34px', textAlign: 'center', padding: '20px' }}>Latest Courses</h2>
         <div style={{display:'flex'}}>
-          {CardData.map((data, indx) => {
+          {CardData.slice(0,4).map((data, indx) => {
             return (
 
               <CardBuilder key={indx}
