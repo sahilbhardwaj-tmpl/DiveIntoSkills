@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import './SearchBarStyles.css'
+import { FaSearch } from "react-icons/fa";
 function SearchBar() {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
@@ -34,14 +35,14 @@ function SearchBar() {
     };
     return (
         <div className='search-bar-container'>
-            <div>
-                <input
+            <div className='search-bar'>
+                <input className='search-bar-input'
                     type="text"
-                    placeholder="Type a letter..."
+                    placeholder="Type to search . . . . ."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <button className='search-button'>Search</button>
+                <span  className="search-icon">{<FaSearch style={{width:'50px',height:'25px',color:'yellow'}}/>}</span>
             </div>
             {searchResults.length > 0 && (
                 <div className="result-dialog-box">
