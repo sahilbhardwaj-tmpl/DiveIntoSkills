@@ -15,6 +15,11 @@
     background: linear-gradient(90deg, #183114 0%, #446129 100%);
     backdrop-filter: blur(10px);
 }
+.dive-into-skills-heading{
+    font-size: 24px;
+    font-weight: 700; 
+    color: #FCEE21;
+}
 .search-bar-comp{
     padding-top: 30px;
 }
@@ -41,12 +46,19 @@
     display: none;
 }
 @media screen and (max-width: 1040px) {
+
+    .dive-into-skills-heading{
+        display: none;
+    }
+    .header {
+        justify-content:space-between
     .logo-heading{
         font-size: 18px;
         font-weight: 400;
     }
     .header {
         justify-content: space-between
+
     }
     .nav-menu {
         flex-direction: column;
@@ -69,6 +81,7 @@
         padding:1rem 0;
         font-size: 28px;
     }
+
     .hamsburger{
         display: initial;
     }

@@ -12,7 +12,8 @@ function Header() {
   return (
     <>
       <div className='header text-color'>
-        <p className="logo-heading">Dive Into Skills</p>
+ header
+        <p className='dive-into-skills-heading' style={{  }}>Dive Into Skills</p>
         <div className='search-bar-comp'><SearchBar/></div>
         <ul className={click ?('nav-menu active'):('nav-menu')}>
        
