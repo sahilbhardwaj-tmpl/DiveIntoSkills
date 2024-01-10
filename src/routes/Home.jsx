@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import NewsLetterPopUp from '../components/NewsLetterPopUp'
 import CardData from '../components/CardData'
 import CardBuilder from '../components/CardBuilder'
+import SearchBar from '../components/SearchBar'
 
 function Home() {
   (function () {
@@ -67,7 +68,7 @@ function Home() {
 
     </div >
       <NewsLetterPopUp />
-
+        <SearchBar/>
 
 
     </>

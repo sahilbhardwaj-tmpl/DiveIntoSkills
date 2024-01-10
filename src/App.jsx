@@ -6,6 +6,7 @@ import Blogs from './routes/Blogs'
 import SingleBlog from './routes/SingleBlog';
 import PageNotFound from './components/pageNotFound';
 import Layout from './components/Layout'
+import{Toaster} from 'react-hot-toast';
 function App() {
   const routes = [
     {
@@ -44,6 +45,7 @@ function App() {
           })}
           <Route path='*' element={<PageNotFound/>}></Route>
         </Routes>
+        <Toaster />
       </Router>
 
     </>

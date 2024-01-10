@@ -1,0 +1,12 @@
+.search-button{
+    border-radius: 10px;
+    background: #FCEE21;
+    width: 80px;
+    height: 35px
+}
+.result-dialog-box{
+    width: '400px';
+    height: '400px';
+    overflow: 'auto';
+    border: '1px solid #ccc'
+}

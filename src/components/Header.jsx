@@ -11,10 +11,7 @@ function Header() {
   return (
     <>
       <div className='header text-color'>
-
         <p style={{ fontSize: '24px', fontWeight: '700', color: '#FCEE21' }}>Dive Into Skills</p>
-
-
         <ul className={click ?('nav-menu active'):('nav-menu')}>
           <Link to='/'><li className='nav-item' >
             Home
