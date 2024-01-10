@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import './HeaderStyles.css'
 import { FaBars, FaTimes } from 'react-icons/fa';
+import SearchBar from './SearchBar'
 function Header() {
   const [click, setClick] = useState(false);
     const handleClick=(()=>{
@@ -12,7 +13,9 @@ function Header() {
     <>
       <div className='header text-color'>
         <p style={{ fontSize: '24px', fontWeight: '700', color: '#FCEE21' }}>Dive Into Skills</p>
+        
         <ul className={click ?('nav-menu active'):('nav-menu')}>
+        <li className='search-bar-comp'><SearchBar/></li>
           <Link to='/'><li className='nav-item' >
             Home
           </li></Link>
