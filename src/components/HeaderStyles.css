@@ -1,3 +1,8 @@
+.logo-heading{
+    font-size: 24px;
+    font-weight: 700;
+    color: #FCEE21
+}
 .header {
     display: flex;
     justify-content:space-between;
@@ -36,7 +41,13 @@
     display: none;
 }
 @media screen and (max-width: 1040px) {
-
+    .logo-heading{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .header {
+        justify-content: space-between
+    }
     .nav-menu {
         flex-direction: column;
         justify-content: center;
@@ -57,9 +68,6 @@
     .nav-menu li{
         padding:1rem 0;
         font-size: 28px;
-    }
-    .search-bar-comp{
-        margin-left: 100px;
     }
     .hamsburger{
         display: initial;
