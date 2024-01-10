@@ -59,7 +59,7 @@ label {
     color: #555;
 }
 
-input,
+.input,
 textarea {
     padding: 10px;
     margin-bottom: 16px;
@@ -74,7 +74,7 @@ textarea {
     resize: vertical;
 }
 
-input::placeholder,
+.input::placeholder,
 textarea::placeholder {
     color: #FCEE21;
 }

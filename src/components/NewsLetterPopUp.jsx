@@ -25,25 +25,24 @@ function NewsLetterPopUp() {
                         </div>
                     </div>
 
-
-                    <div className="subscribe-form">
-                        <div className="input-container">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className="email-input"
-                            />
-                            <button onClick={handleSubscribe} className="subscribe-button">
-                                Subscribe
-                            </button>
-                        </div>
+                    <div className="input-container">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="email-input"
+                        />
+                        <button onClick={handleSubscribe} className="subscribe-button">
+                            Subscribe
+                        </button>
                     </div>
-                    <p style={{color:'#EFECB4', marginBottom:'20px',fontSize: '16px'}}>We Promise not to spam you!</p>
+                    <p style={{ color: '#EFECB4', marginBottom: '20px', fontSize: '16px' }}>We Promise not to spam you!</p>
                 </div>
-
+                
             </div>
+
+
 
 
 

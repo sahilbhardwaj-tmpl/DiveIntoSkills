@@ -71,7 +71,7 @@ function Contact() {
                             <h2 className='color'>Send Me Email</h2>
                             <form onSubmit={handleSubmit}>
                                 
-                                <input
+                                <input className='input'
                                     type="text"
                                     id="yourName"
                                     name="yourName"
@@ -82,7 +82,7 @@ function Contact() {
                                 />
 
                                 
-                                <input
+                                <input className='input'
                                 placeholder="Your Email"
                                     type="email"
                                     id="yourEmail"
@@ -91,7 +91,7 @@ function Contact() {
                                     onChange={handleChange}
                                     required
                                 />
-                                <input
+                                <input className='input'
                                 placeholder="Headline"
                                     type="text"
                                     id="headline"
