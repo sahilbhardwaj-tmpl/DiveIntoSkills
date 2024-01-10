@@ -1,0 +1,20 @@
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F3F4D3;
+  }
+  
+  .not-found-content {
+    text-align: center;
+    color: #404040;
+  }
+  .h{
+    font-size: 10rem;
+    margin: 0;
+  }
+  .p{
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
