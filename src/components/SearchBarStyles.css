@@ -10,6 +10,11 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     font-size: 16px;
+    color: #FCEE21;
+    background: #446129;
+  }
+  .search-bar-input::placeholder{
+    color: #FCEE21;
   }
   .search-icon {
     position: absolute;
@@ -26,10 +31,10 @@
     border: '1px solid #ccc'
 }
 
-=======
+
 @media (max-width: 768px) {
   .search-bar {
-    width: 140px;
+    width: 170px;
   }
   .search-icon {
     display: none;
