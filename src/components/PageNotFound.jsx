@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './PageNotFoundStyles.css'
 const PageNotFound = () => {
   (function () {
     window.scrollTo({
@@ -8,8 +8,13 @@ const PageNotFound = () => {
   })()
   return (
     <>
-    <div>pageNotFound</div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda beatae hic, dolores aliquam veniam vel inventore quod sit unde nam accusamus labore fugit odit ex quisquam error. Dignissimos ipsa velit dolorem molestias aliquid nostrum magni? Soluta nostrum fugiat, adipisci architecto ea excepturi non quibusdam commodi aperiam nobis laboriosam animi ad sequi laudantium consequuntur voluptatum quidem, enim vitae eos ipsam, quo eaque esse! Amet aspernatur, nulla ipsa cupiditate veniam, autem dignissimos doloribus fuga itaque quisquam tempora voluptatem labore cumque quia similique.</p>
+       <div className="not-found-container">
+      <div className="not-found-content">
+        <h1 className='h1'>404</h1>
+        <p className='p'>Page Not Found</p>
+        <p className='p'> Sorry, the page you are looking for might be in another universe.</p>
+      </div>
+    </div>
     </> )
 }
 
