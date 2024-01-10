@@ -13,9 +13,9 @@ function Header() {
     <>
       <div className='header text-color'>
         <p style={{ fontSize: '24px', fontWeight: '700', color: '#FCEE21' }}>Dive Into Skills</p>
-        
+        <div className='search-bar-comp'><SearchBar/></div>
         <ul className={click ?('nav-menu active'):('nav-menu')}>
-        <li className='search-bar-comp'><SearchBar/></li>
+       
           <Link to='/'><li className='nav-item' >
             Home
           </li></Link>
