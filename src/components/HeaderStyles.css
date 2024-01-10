@@ -10,12 +10,17 @@
     background: linear-gradient(90deg, #183114 0%, #446129 100%);
     backdrop-filter: blur(10px);
 }
+.search-bar-comp{
+    padding-top: 30px;
+}
 .nav-menu {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-menu li {
-    padding: 0 1rem;
+    padding-right: 1rem;
 }
 
 
@@ -53,9 +58,9 @@
         padding:1rem 0;
         font-size: 28px;
     }
-    /* .nav-menu li a{
-        font-size: 2rem;
-    } */
+    .search-bar-comp{
+        margin-left: 100px;
+    }
     .hamsburger{
         display: initial;
     }
