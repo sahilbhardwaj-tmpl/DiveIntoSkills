@@ -8,7 +8,7 @@ function Layout({ children }) {
                 <Header />
                 <div style={{
                     minHeight: '100vh',
-                    paddingTop: '60px',
+                    paddingTop: '61px',
                     backgroundColor: '#F3F4D3'
                 }}>
                     {children}
