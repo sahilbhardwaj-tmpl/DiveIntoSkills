@@ -12,7 +12,7 @@ function Header() {
   return (
     <>
       <div className='header text-color'>
-        <p className='dive-into-skills-heading' style={{  }}>Dive Into Skills</p>
+        <p className='dive-into-skills-heading' >Dive Into Skills</p>
         <div className='search-bar-comp'><SearchBar/></div>
         <ul className={click ?('nav-menu active'):('nav-menu')}>
        
@@ -21,9 +21,6 @@ function Header() {
           </li></Link>
           <Link to='/Blogs'><li className='nav-item'>
             Blogs
-          </li></Link>
-          <Link to='/Courses'><li className='nav-item'>
-            Courses
           </li></Link>
           <Link to='/About'><li className='nav-item'>
             About

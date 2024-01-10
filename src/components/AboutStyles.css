@@ -47,6 +47,9 @@
         margin-top: 15px;
         width: 80%;
       }
+      .socialMediaLinks{
+        gap: 5px;
+      }
   
     
   }
