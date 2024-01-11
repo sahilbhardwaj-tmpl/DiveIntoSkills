@@ -23,10 +23,11 @@ function SearchBar() {
     const fetchData = async (query) => {
         try {
             setIsLoading(true);
-            const response = await axios.get(`${query}`);
+            // const response = await axios.get(`${query}`);
             setSearchResults(response.data);
+            console.log('no data');
         } catch (error) {
-            toast.error('Enter a valid string');
+            toast.error('No result found');
             console.error('Error fetching data:', error);
 
         } finally {

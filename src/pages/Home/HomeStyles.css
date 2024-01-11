@@ -6,8 +6,13 @@
     padding-right: 15px; */
     
 }
+
 .remove-decoration{
     color: black;
+    transition: transform 0.3s ease
+}
+.remove-decoration:hover{
+    transform: translateY(-8px);
 }
 @media (max-width: 768px) {
     .Latest-blog-cards{

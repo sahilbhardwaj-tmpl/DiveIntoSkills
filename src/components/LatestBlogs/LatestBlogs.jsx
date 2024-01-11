@@ -42,7 +42,7 @@ function LatestBlogs() {
                         <div className='cards'>
                             {displayedData.map((data, indx) => {
                                 return (
-                                    <Link to="/SinglePost">
+                                    <Link className='card-hover' to="/SinglePost">
                                         <CardBuilder key={indx}
                                         img={data.blogImg}
                                         title={data.title}

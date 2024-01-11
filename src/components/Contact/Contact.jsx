@@ -102,7 +102,7 @@ function Contact() {
                                 />
 
                                 
-                                <textarea
+                                <textarea className='textarea'
                                 placeholder="Details about Query"
                                     id="queryDetails"
                                     name="queryDetails"
