@@ -55,16 +55,22 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    height: 50px;
+    height: 40px;
+    border: 2px solid #FCEE21;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
 .email-input {
-    padding: 10px; 
-    border: 2px solid #FCEE21;
-    border-radius: 50px 0 0 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
     width: 240px;  
     color: #FCEE21;
-    background: #446129;
+   
     
 }
 .email-input::placeholder{
@@ -72,14 +78,14 @@
 }
 
 .subscribe-button {
-    padding: 10px;
-    border-radius: 0px 50px 50px 0px;
+    height: 100%;
+    border-radius: 50px; 
     border: none;
     border: 2px solid #FCEE21;
     background: #FCEE21;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100px;
+    width: 150px;
 }
 
 

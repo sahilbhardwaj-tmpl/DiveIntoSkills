@@ -2,9 +2,9 @@ import React from 'react'
 import './LatestBlogStyles.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NewsLetterPopUp from './NewsLetterPopUp'
-import CardData from './CardData'
-import CardBuilder from './CardBuilder'
+import NewsLetterPopUp from '../NewsLetterPopUp/NewsLetterPopUp'
+import CardData from '../Card/CardData'
+import CardBuilder from '../Card/CardBuilder'
 function LatestBlogs() {
     const itemsPerPage = 3;
     const [displayedData, setDisplayedData] = useState(CardData.slice(0, itemsPerPage));

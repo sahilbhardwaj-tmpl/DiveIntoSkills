@@ -1,6 +1,6 @@
 import React from 'react'
 import './HeroSectionStyles.css'
-import vectorImage from '../assets/hero_section_vector.png'
+import vectorImage from '../../assets/hero_section_vector.png'
 function HeroSection() {
     return (
         <>

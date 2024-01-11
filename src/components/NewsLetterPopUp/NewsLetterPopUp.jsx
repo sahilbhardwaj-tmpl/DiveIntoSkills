@@ -1,7 +1,7 @@
 import React from 'react'
 import './NewsLetterPopUpStyles.css'
 import { useState } from 'react';
-import Email_icon from '../assets/Email_icon_1-removebg-preview.png'
+import Email_icon from '../../assets/Email_icon_1-removebg-preview.png'
 function NewsLetterPopUp() {
     const [email, setEmail] = useState('');
     const handleSubscribe = () => {

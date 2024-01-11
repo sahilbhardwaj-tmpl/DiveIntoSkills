@@ -7,14 +7,17 @@
 .search-bar-input {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
+    border: none;
+    border-bottom: 1px solid #FCEE21;
+    outline: none;
     font-size: 16px;
     color: #FCEE21;
-    background: #446129;
+    background: transparent;
+    padding-right: 45px;
   }
   .search-bar-input::placeholder{
     color: #FCEE21;
+    font-size: 20px;
   }
   .search-icon {
     position: absolute;
@@ -34,7 +37,7 @@
 
 @media (max-width: 768px) {
   .search-bar {
-    width: 170px;
+    width: 230px;
   }
   .search-icon {
     display: none;

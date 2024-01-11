@@ -1,7 +1,7 @@
 import React from 'react'
 import './AboutStyles.css'
-import DiveIntoSkills from '../assets/Dive_into_skills.png'
-import profilePic from '../assets/pic.png'
+import DiveIntoSkills from '../../assets/Dive_into_skills.png'
+import profilePic from '../../assets/pic.png'
 
 function About() {
     return (

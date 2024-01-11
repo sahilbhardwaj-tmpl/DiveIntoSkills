@@ -1,9 +1,12 @@
 .Latest-blog-cards{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
     
 }
-a{
+.remove-decoration{
     color: black;
 }
 @media (max-width: 768px) {

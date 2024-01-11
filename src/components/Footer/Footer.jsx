@@ -1,25 +1,31 @@
 import React from 'react'
 import './FooterStyles.css'
+import { Link } from 'react-router-dom'
 function Footer() {
     return (
         <>
             <div className='footer'>
-                <div><p style={{ color: '#FCEE21', fontWeight: '900', fontSize: '24px' }}>Dive Into Skills</p></div>
+                <div>
+                    <p className='footer-heading'
+                    style={{ color: '#FCEE21', fontWeight: '900', fontSize: '24px',paddingLeft:'8px' }}>Dive Into Skills</p>
+                </div>
                 <div className='text-container'>
                     <div className='txt'>
                         <p style={{color: '#DCDE9F'}}>The latest articles and courses to help you upgrade your skills and learn the latest trends. Master web Development with these amazing resources that are available for free!</p>
                     </div>
-                    <ul className='flex-row'>
-                        <li>Home</li>
-                        <li>Blog</li>
-                        <li>Course</li>
-                        <li>YouTube</li>
+                    <ul className='flex-row_1'>
+                        <Link to='/'><li>Home</li></Link>
+                        <Link to='/blogs'><li>Blog</li></Link>
+                        <Link to='/courses'><li>Course</li></Link>
+                        <Link to='/Youtube'><li>YouTube</li></Link>
+                        
                     </ul>
-                    <ul  className='flex-row'>
-                        <li>About</li>
-                        <li>Contact</li>
-                        <li>Privacy Policy</li>
-                        <li>Terms & Conditions</li>
+                    <ul  className='flex-row_2'>
+                        <Link to='About'><li>About</li></Link>
+                        <Link to='/contact'><li>Contact</li></Link>
+                        <Link to='/Privacy Policy'><li>Privacy Policy</li></Link>
+                        <Link to='/conditions'><li>Terms & Conditions</li></Link>
+                        
                     </ul>
                 </div>
                 <div className='social-media-links'>

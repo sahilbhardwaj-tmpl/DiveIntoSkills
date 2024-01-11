@@ -1,9 +1,9 @@
 import React from 'react'
 import './SingleBlogPostStyles.css'
-import author_pic from '../assets/author_pic.png';
-import Blog_Img from '../assets/Blog_Img.png'
-import CardData from '../components/CardData'
-import CardBuilder from '../components/CardBuilder'
+import author_pic from '../../assets/author_pic.png';
+import Blog_Img from '../../assets/Blog_Img.png'
+import CardData from '../Card/CardData'
+import CardBuilder from '../Card/CardBuilder'
 function SingleBlogPost() {
     const data = {
         title: 'There is no one who loves pain itself, who seeks after it and wants to have it, because it is pain',

@@ -1,4 +1,4 @@
-import blogImg from '../assets/Rectangle 15.png'
+import blogImg from '../../assets/Rectangle 15.png'
 const CardData=[{
     blogImg:blogImg,
     title:'Title',

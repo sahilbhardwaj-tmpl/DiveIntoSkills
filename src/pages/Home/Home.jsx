@@ -1,18 +1,14 @@
 import React from 'react'
-import HeroSection from '../components/HeroSection'
+import HeroSection from '../../components/HeroSection/HeroSection'
 import './HomeStyles.css'
 import { Link } from 'react-router-dom'
-import NewsLetterPopUp from '../components/NewsLetterPopUp'
-import CardData from '../components/CardData'
-import CardBuilder from '../components/CardBuilder'
+import NewsLetterPopUp from '../../components/NewsLetterPopUp/NewsLetterPopUp'
+import CardData from '../../components/Card/CardData'
+import CardBuilder from '../../components/Card/CardBuilder'
 
 
 function Home() {
-  (function () {
-    window.scrollTo({
-      top: 0,
-    });
-  })()
+  
   return (
     <>
       <HeroSection />
@@ -21,7 +17,7 @@ function Home() {
         <div className='Latest-blog-cards'>
           {CardData.slice(0, 4).map((data, indx) => {
             return (
-              <Link to="/SinglePost">
+              <Link className='remove-decoration' to="/SinglePost">
                 <CardBuilder key={indx}
                   img={data.blogImg}
                   title={data.title}
@@ -33,7 +29,7 @@ function Home() {
             )
           })}
         </div>
-        <Link to='/Blogs'>
+        <Link className='remove-decoration' to='/Blogs'>
           <button className='btn-styles' style={{
             cursor: 'pointer',
             color: '#FCEE21',
@@ -57,7 +53,7 @@ function Home() {
         )
           })}
       </div>
-      <Link to='/latestCourses'>
+      <Link className='remove-decoration'to='/latestCourses'>
         <button className='btn-styles' style={{
           cursor: 'pointer',
           color: '#FCEE21',

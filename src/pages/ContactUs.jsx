@@ -1,11 +1,7 @@
 import React from 'react'
-import Contact from '../components/Contact'
+import Contact from '../components/Contact/Contact'
 function ContactUs() {
-  (function() {
-    window.scrollTo({
-      top: 0,
-    });
-  })()
+
   return (
     <>
     <Contact/>
