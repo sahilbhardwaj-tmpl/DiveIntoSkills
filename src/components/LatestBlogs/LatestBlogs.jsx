@@ -28,7 +28,7 @@ function LatestBlogs() {
                             <ul className='category-links'>
                                 <li><Link ><p style={{ fontSize: '20px' }}>Category 1</p></Link></li>
                                 <li><Link ><p style={{ fontSize: '20px' }}>Category 2</p></Link></li>
-                                
+                                <li><Link ><p style={{ fontSize: '20px' }}>Category 3</p></Link></li>
                                 <li><Link ><p style={{ fontSize: '20px' }}>Category 4</p></Link></li>
                                 <li><Link ><p style={{ fontSize: '20px' }}>Category 5</p></Link></li>
                                 <li><Link ><p style={{ fontSize: '20px' }}>Category 6</p></Link></li>

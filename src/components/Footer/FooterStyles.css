@@ -94,8 +94,10 @@
         padding-right: 18px;
     }
     .info{
-        margin-left: 10px;
-        gap: 100px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        gap: 10px;
     }
     .social-media-links{
         margin-left: 0px;

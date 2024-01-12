@@ -59,10 +59,11 @@
       align-items: center;
     }
     .social_media_icons{
-      gap: 3px;
+      gap: 10px;
       
     }
     .blog-date{
       margin-top: 12px;
     }
+    
 }

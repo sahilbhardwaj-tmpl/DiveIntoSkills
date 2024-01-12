@@ -58,12 +58,14 @@
         display: none;
     }
     .header {
-        padding: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 10px;
+        padding-right: 10px;
         justify-content:space-between
     }
     .search-bar-comp{
         margin-left: 0px;
-        
     }
 
     .nav-menu {
