@@ -1,6 +1,6 @@
 .main-container{
     width: 100%;
-    height: 250px;
+    height: auto;
     padding: 20px;
     background: linear-gradient(90deg, #183114 0.75%, #446129 100%);
 }
