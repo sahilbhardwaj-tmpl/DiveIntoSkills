@@ -8,6 +8,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 function SingleBlogPost() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  };
+
   const data = {
     title:
       "There is no one who loves pain itself, who seeks after it and wants to have it, because it is pain",
@@ -20,9 +28,29 @@ function SingleBlogPost() {
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra arcu imperdiet lectus pharetra, at scelerisque augue ultrices. Ut in condimentum turpis. Nunc pulvinar quis nisi sed fermentum. Nulla facilisi. Aenean at augue quis elit rutrum sollicitudin. Quisque congue et magna vel condimentum. In quis sem ut magna dictum feugiat eu vel ex. Mauris elementum diam eu tempus aliquet. Mauris tempor, ex eget auctor molestie, orci justo commodo orci, sit amet placerat tellus massa sed augue. Donec non fermentum leo, at tincidunt tellus. Maecenas ac pharetra justo. Sed commodo, ligula vel aliquam varius, enim metus eleifend felis, id interdum purus nunc non lectus Aenean a magna aliquam, pulvinar elit consectetur, consectetur eros. Morbi laoreet eu enim eu ultricies. Cras rutrum sit amet tortor sed mollis. Donec non enim efficitur, porta mauris vitae, ultrices velit. Quisque et lacus mollis nibh sollicitudin tristique ut vitae nunc. Vestibulum eu est arcu. Phasellus quis neque orci. Cras vel consequat tellus, sit amet congue neque.dictum arcu nec, dapibus urna. Quisque et metus varius, rhoncus nunc a, vestibulum lacus. Aliquam eget malesuada quam. Nulla eget sapien convallis, tristique nulla et, imperdiet lorem. Quisque sed lacus tellus. Proin tincidunt sapien euismod libero aliquet, nec vulputate turpis condimentum. Sed pellentesque nibh ac fermentum venenatis. Aenean a magna aliquam, pulvinar elitdictum arcu nec, dapibus urna. Quisque et metus varius, rhoncus nunc a, vestibulum lacus. Aliquam eget malesuada quam. Nulla eget sapien convallis, tristique nulla et, imperdiet lorem. Quisque sed lacus tellus. Proin tincidunt sapien euismod libero aliquet, nec vulputate turpis condimentum. Sed pellentesque nibh ac fermentum venenatis. Aenean a magna aliquam, pulvinar elit",
   };
-  
+
   return (
     <>
+      <Slider {...settings}>
+        <div>
+          <h3>1</h3>
+        </div>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+      </Slider>
       <div className="single-blog-post">
         <h2 className="blog-title">{data.title}</h2>
 
@@ -164,24 +192,28 @@ function SingleBlogPost() {
       </div>
 
       <div>
-        <h2 className='Read_Related_Blogs' style={{ textAlign: "center", marginTop: "60px" }}>
+        <h2
+          className="Read_Related_Blogs"
+          style={{ textAlign: "center", marginTop: "60px" }}
+        >
           Read Related Blogs
         </h2>
         <div className="related-blogs ">
-          {CardData.slice(0, 4).map((data, indx) => {
-            
-            return (
-              <div><CardBuilder
-              key={indx}
-              img={data.blogImg}
-              title={data.title}
-              description={data.description}
-              date={data.date}
-              author={data.author}
-            /></div>
-              
-            );
-          })}
+          <Slider {...settings}>
+            {CardData.slice(0, 4).map((data, indx) => {
+              return (
+                <div key={indx}>
+                  <CardBuilder
+                    img={data.blogImg}
+                    title={data.title}
+                    description={data.description}
+                    date={data.date}
+                    author={data.author}
+                  />
+                </div>
+              );
+            })}
+          </Slider>
         </div>
       </div>
     </>
