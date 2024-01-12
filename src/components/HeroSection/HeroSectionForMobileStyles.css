@@ -1,0 +1,28 @@
+.main-container{
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    background: linear-gradient(90deg, #183114 0.75%, #446129 100%);
+}
+.main-heading{
+    /* text-align: center; */
+    color:#FCEE21
+}
+.text-and-image-container{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+.subheading-container{
+    width: 50%;
+}
+.vector-container{
+    width: 50%;
+}
+.vector-container>img{
+    width: 100%;
+    height: auto;
+}
+.subheading-container>p{
+    color: white;
+}
