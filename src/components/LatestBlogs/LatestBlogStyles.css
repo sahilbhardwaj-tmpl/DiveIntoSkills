@@ -52,6 +52,24 @@
   justify-content: center;
   align-items: center;
 }
+.category-links li{
+  position: relative;
+  margin-top: 20px;
+}
+.category-links li::after {
+  background-color:#555;
+  content: "";
+  width: 0px;
+  height: 2px;
+  left: 60px;
+  top: 25px;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+}
+
+.category-links li:hover::after {
+  width: 50%;
+}
   @media only screen and (max-width: 768px) {
     .blog-layout {
       flex-direction: column;

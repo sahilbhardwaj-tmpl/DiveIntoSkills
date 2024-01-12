@@ -25,12 +25,18 @@ function LatestBlogs() {
                     <div className="category-section">
                         <h2 className='category-heading'>Categories</h2>
                         <div className='categories'>
-                            <p style={{ fontSize: '20px' }}>Category 1</p>
-                            <p style={{ fontSize: '20px' }} >Category 2</p>
-                            <p style={{ fontSize: '20px' }}>Category 3</p>
-                            <p style={{ fontSize: '20px' }}>Category 4</p>
-                            <p style={{ fontSize: '20px' }}>Category 5</p>
-                            <p style={{ fontSize: '20px' }}>Category 6</p>
+                            <ul className='category-links'>
+                                <li><Link ><p style={{ fontSize: '20px' }}>Category 1</p></Link></li>
+                                <li><Link ><p style={{ fontSize: '20px' }}>Category 2</p></Link></li>
+                                
+                                <li><Link ><p style={{ fontSize: '20px' }}>Category 4</p></Link></li>
+                                <li><Link ><p style={{ fontSize: '20px' }}>Category 5</p></Link></li>
+                                <li><Link ><p style={{ fontSize: '20px' }}>Category 6</p></Link></li>
+                                
+                            </ul>
+                            
+                            
+                           
                         </div>
 
 
