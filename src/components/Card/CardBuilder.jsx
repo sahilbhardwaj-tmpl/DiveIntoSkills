@@ -1,9 +1,14 @@
-import React from 'react'
-import './CardBuilderStyles.css'
+import React from "react";
+import "./CardBuilderStyles.css";
 function Card(props) {
+  console.log(props.category);
   return (
     <div className="card">
-      <img src={props.img} alt={'blog Image'} className="card-image" />
+      <div className="image_container">
+        <img src={props.img} alt={"blog Image"} className="card-image" />
+        <div class="category-text">{props.category}</div>
+      </div>
+
       <div className="card-content">
         <h2 className="card-title">{props.title}</h2>
         <p className="card-description">{props.description}</p>
@@ -13,7 +18,7 @@ function Card(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;

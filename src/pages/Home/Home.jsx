@@ -23,7 +23,9 @@ function Home() {
                   title={data.title}
                   description={data.description}
                   date={data.date}
-                  author={data.author} />
+                  author={data.author}
+                  category={data.category} />
+                  
               </Link>
 
             )
@@ -49,7 +51,9 @@ function Home() {
             title={data.title}
             description={data.description}
             date={data.date}
-            author={data.author} />
+            author={data.author}
+            category={data.category}
+            />
             </Link>
               
            
