@@ -42,7 +42,7 @@
     cursor: pointer;
   }
   .related-blogs{
-    margin-top: 40px;
+    margin-top: 0px;
   }
   .related-blogs{
     display: flex;
@@ -58,14 +58,13 @@
       overflow-x: scroll;
       justify-content: flex-start; 
       align-items: center;
-    
       -webkit-overflow-scrolling: touch; 
     }
     
     .related-blogs > div {
       flex: 0 0 auto;
       margin-right: 25px;
-      margin-left: 40px;
+      margin-left: 35px;
     }
     .social_media_icons{
       gap: 10px;
