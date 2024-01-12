@@ -30,15 +30,16 @@ function Header() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <Link to="/">
-              <li className="nav-item">Home</li>
+              <li onClick={handleClick}
+              className="nav-item">Home</li>
             </Link>
-            <Link to="/Blogs">
+            <Link onClick={handleClick} to="/Blogs">
               <li className="nav-item">Blogs</li>
             </Link>
-            <Link to="/About">
+            <Link onClick={handleClick} to="/About">
               <li className="nav-item">About</li>
             </Link>
-            <Link to="/Contact">
+            <Link onClick={handleClick} to="/Contact">
               <li className="nav-item">Contact</li>
             </Link>
           </ul>
