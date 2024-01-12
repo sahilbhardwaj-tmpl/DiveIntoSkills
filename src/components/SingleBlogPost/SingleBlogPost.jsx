@@ -164,7 +164,7 @@ function SingleBlogPost() {
       </div>
 
       <div>
-        <h2 style={{ textAlign: "center", marginTop: "60px" }}>
+        <h2 className='Read_Related_Blogs' style={{ textAlign: "center", marginTop: "60px" }}>
           Read Related Blogs
         </h2>
         <div className="related-blogs ">
