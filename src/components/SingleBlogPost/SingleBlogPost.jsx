@@ -169,15 +169,17 @@ function SingleBlogPost() {
         </h2>
         <div className="related-blogs ">
           {CardData.slice(0, 4).map((data, indx) => {
+            
             return (
-              <CardBuilder
-                key={indx}
-                img={data.blogImg}
-                title={data.title}
-                description={data.description}
-                date={data.date}
-                author={data.author}
-              />
+              <div><CardBuilder
+              key={indx}
+              img={data.blogImg}
+              title={data.title}
+              description={data.description}
+              date={data.date}
+              author={data.author}
+            /></div>
+              
             );
           })}
         </div>
