@@ -46,10 +46,10 @@
     width: 100%;
     overflow-x:hidden ;
   }
-  /* .related-blogs{
+  .related-blogs{
     display: flex;
     justify-content: center;
-  } */
+  }
   @media (max-width: 768px) {
     .single-blog-post{
       margin-left: 30px;
@@ -62,7 +62,7 @@
       align-items: center;
 
     }
-    /* .related-blogs {
+    .related-blogs {
       display: flex;
       overflow-x: scroll;
       justify-content: flex-start; 
@@ -74,7 +74,7 @@
       flex: 0 0 auto;
       margin-right: 25px;
       margin-left: 35px;
-    } */
+    }
     .social_media_icons{
       gap: 10px;
       

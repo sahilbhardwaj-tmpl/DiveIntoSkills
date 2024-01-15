@@ -8,13 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 function SingleBlogPost() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-  };
+ 
 
   const data = {
     title:
@@ -31,26 +25,7 @@ function SingleBlogPost() {
 
   return (
     <>
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
+      
       <div className="single-blog-post">
         <h2 className="blog-title">{data.title}</h2>
 
@@ -199,10 +174,10 @@ function SingleBlogPost() {
           Read Related Blogs
         </h2>
         <div className="related-blogs ">
-          <Slider {...settings}>
+         
             {CardData.slice(0, 4).map((data, indx) => {
               return (
-                <div key={indx}>
+                
                   <CardBuilder
                     img={data.blogImg}
                     title={data.title}
@@ -210,10 +185,10 @@ function SingleBlogPost() {
                     date={data.date}
                     author={data.author}
                   />
-                </div>
+               
               );
             })}
-          </Slider>
+         
         </div>
       </div>
     </>
