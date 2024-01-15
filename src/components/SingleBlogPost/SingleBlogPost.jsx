@@ -4,12 +4,15 @@ import author_pic from "../../assets/author_pic.png";
 import Blog_Img from "../../assets/Blog_Img.png";
 import CardData from "../Card/CardData";
 import CardBuilder from "../Card/CardBuilder";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-function SingleBlogPost() {
- 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation, Pagination, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
+function SingleBlogPost() {
   const data = {
     title:
       "There is no one who loves pain itself, who seeks after it and wants to have it, because it is pain",
@@ -25,7 +28,6 @@ function SingleBlogPost() {
 
   return (
     <>
-      
       <div className="single-blog-post">
         <h2 className="blog-title">{data.title}</h2>
 
@@ -166,29 +168,64 @@ function SingleBlogPost() {
         </div>
       </div>
 
-      <div>
+      <div className="related-blogs-container">
         <h2
           className="Read_Related_Blogs"
           style={{ textAlign: "center", marginTop: "60px" }}
         >
           Read Related Blogs
         </h2>
-        <div className="related-blogs ">
-         
-            {CardData.slice(0, 4).map((data, indx) => {
-              return (
-                
-                  <CardBuilder
-                    img={data.blogImg}
-                    title={data.title}
-                    description={data.description}
-                    date={data.date}
-                    author={data.author}
-                  />
-               
-              );
-            })}
-         
+      </div>
+      <div className="Swiper-container-for-desktop">
+        <div className="Swiper">
+          <Swiper className="swiper-container-for-mobile"
+            modules={[Navigation, Pagination, A11y]}
+            spaceBetween={10}
+            slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            {CardData.map((data, indx) => (
+              <SwiperSlide>
+                <CardBuilder
+                  img={data.blogImg}
+                  title={data.title}
+                  description={data.description}
+                  date={data.date}
+                  author={data.author}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+      <div className="Swiper-container-for-mobile">
+        <div className="Swiper">
+          <Swiper
+            modules={[Navigation, Pagination, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            {CardData.map((data, indx) => (
+              <SwiperSlide>
+                <CardBuilder
+                  img={data.blogImg}
+                  title={data.title}
+                  description={data.description}
+                  date={data.date}
+                  author={data.author}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </>
