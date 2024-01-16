@@ -50,9 +50,11 @@
     display: flex;
     justify-content: center;
   }
+ 
   .Swiper{
       width: 80%;
       margin-left: 10%;
+      padding-bottom: 20px;
   }
   .Swiper-container{
     width: 100vw;
@@ -73,6 +75,9 @@
 }
 .swiper-pagination-bullet-active {
   background: #183114!important; ;
+}
+.swiper-scrollbar{
+  display: none;
 }
   @media (max-width: 768px) {
     .Swiper-container-for-mobile{
