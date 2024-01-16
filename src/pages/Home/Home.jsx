@@ -1,13 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import "./HomeStyles.css";
 import { Link } from "react-router-dom";
 import NewsLetterPopUp from "../../components/NewsLetterPopUp/NewsLetterPopUp";
-import CardData from "../../components/Card/CardData";
 import CardBuilder from "../../components/Card/CardBuilder";
 import HeroSectionForMobile from "../../components/HeroSection/HeroSectionForMobile";
+import { ClipLoader } from "react-spinners";
+import toast from 'react-hot-toast';
 
 function Home() {
+  const [limitedBlogs, setLimitedBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://diveintoskill.onrender.com/limited-blogs"
+        );
+        if (response.ok) {
+          const data = await response.json();
+          setLimitedBlogs(data);
+        } else {
+          toast.error('Failed to load blogs');
+          console.error("Failed to fetch data");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    if (limitedBlogs.length === 0) {
+      fetchData();
+    }
+  }, [limitedBlogs]);
+  const getDescriptionPreview = (description, maxLength) => {
+    return description.length > maxLength
+      ? `${description.substring(0, maxLength)}...`
+      : description;
+  };
+  const formatDateString = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
   return (
     <>
       <div className="hero-section-for-desktop">
@@ -17,7 +50,7 @@ function Home() {
         <HeroSectionForMobile />
       </div>
 
-      <div>
+      <div className="limited-blog-section">
         <h2
           style={{
             fontWeight: "700",
@@ -29,21 +62,32 @@ function Home() {
           Latest Blogs
         </h2>
         <div className="Latest-blog-cards">
-          {CardData.slice(0, 4).map((data, indx) => {
-            return (
-              <Link className="remove-decoration" to="/SinglePost">
+          {limitedBlogs.length === 0 ? (
+
+            <ClipLoader
+              color="#183114"
+              loading={true}
+              size={60}
+            />
+          ) : (
+            limitedBlogs.map((data) => (
+              <Link
+                key={data.id}
+                className="remove-decoration"
+                to="/SinglePost"
+              >
                 <CardBuilder
-                  key={indx}
-                  img={data.blogImg}
+                  key={data.id}
+                  img={data.link}
                   title={data.title}
-                  description={data.description}
-                  date={data.date}
-                  author={data.author}
-                  category={data.category}
+                  description={getDescriptionPreview(data.description, 160)}
+                  date={formatDateString(data.createdAt)}
+                  author={data.authorId}
+                  category={data.categoryId}
                 />
               </Link>
-            );
-          })}
+            ))
+          )}
         </div>
         <div style={{ textAlign: "center" }}>
           <Link className="remove-decoration" to="/Blogs">
@@ -61,7 +105,7 @@ function Home() {
           </Link>
         </div>
 
-        <h2
+        {/* <h2
           style={{
             fontWeight: "700",
             fontSize: "34px",
@@ -102,7 +146,7 @@ function Home() {
               View More
             </button>
           </Link>
-        </div>
+        </div> */}
       </div>
       <NewsLetterPopUp />
     </>
