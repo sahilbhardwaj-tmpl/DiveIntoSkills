@@ -178,7 +178,7 @@ function SingleBlogPost() {
       </div>
       <div className="Swiper-container-for-desktop">
         <div className="Swiper">
-          <Swiper className="swiper-container-for-mobile"
+          <Swiper
             modules={[Navigation, Pagination, A11y]}
             spaceBetween={10}
             slidesPerView={3}
@@ -188,7 +188,7 @@ function SingleBlogPost() {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
-            {CardData.map((data, indx) => (
+            {CardData.slice(0,4).map((data, indx) => (
               <SwiperSlide>
                 <CardBuilder
                   img={data.blogImg}
@@ -214,7 +214,7 @@ function SingleBlogPost() {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
-            {CardData.map((data, indx) => (
+            {CardData.slice(0,4).map((data, indx) => (
               <SwiperSlide>
                 <CardBuilder
                   img={data.blogImg}

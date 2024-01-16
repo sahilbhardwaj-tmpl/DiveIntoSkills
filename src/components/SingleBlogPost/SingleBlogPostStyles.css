@@ -65,6 +65,15 @@
     align-items: center !important;
     justify-content: center !important;
   }
+  .swiper-button-prev {
+    color: #183114 !important;
+}
+.swiper-button-next{
+  color: #183114!important;
+}
+.swiper-pagination-bullet-active {
+  background: #183114!important; ;
+}
   @media (max-width: 768px) {
     .Swiper-container-for-mobile{
       display: initial;
@@ -75,8 +84,13 @@
     
     .Swiper{
       width: 80%;
-     
-  }
+    }
+    .swiper-button-prev {
+        display: none !important;
+    }
+    .swiper-button-next{
+      display: none !important;
+    }
    
   }
 
