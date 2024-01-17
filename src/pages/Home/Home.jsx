@@ -32,11 +32,7 @@ function Home() {
       fetchData();
     }
   }, [limitedBlogs]);
-  const getDescriptionPreview = (description, maxLength) => {
-    return description.length > maxLength
-      ? `${description.substring(0, maxLength)}...`
-      : description;
-  };
+  
   const formatDateString = (dateString) => {
     const unformatted = new Date(dateString).toLocaleDateString(undefined,{ day: '2-digit', month: '2-digit', year: 'numeric' }).split("/");
     return [unformatted[1], unformatted[0], unformatted[2]].join("/");
@@ -76,7 +72,7 @@ function Home() {
                   key={data.id}
                   img={data.link}
                   title={data.title}
-                  description={getDescriptionPreview(data.description, 160)}
+                  description={data.description}
                   date={formatDateString(data.createdAt)}
                   author={data.authorId}
                   category={data.categoryId}
@@ -103,49 +99,6 @@ function Home() {
             </Link>
           </div>
         )}
-
-        {/* <h2
-          style={{
-            fontWeight: "700",
-            fontSize: "34px",
-            textAlign: "center",
-            padding: "20px",
-          }}
-        >
-          Latest Courses
-        </h2>
-        <div className="Latest-blog-cards">
-          {CardData.slice(0, 4).map((data, indx) => {
-            return (
-              <Link className="remove-decoration" to="/latestCourses">
-                <CardBuilder
-                  key={indx}
-                  img={data.blogImg}
-                  title={data.title}
-                  description={data.description}
-                  date={data.date}
-                  author={data.author}
-                  category={data.category}
-                />
-              </Link>
-            );
-          })}
-        </div>
-        <div style={{ textAlign: "center" }}>
-          <Link className="remove-decoration" to="/latestCourses">
-            <button
-              className="btn-styles"
-              style={{
-                cursor: "pointer",
-                color: "#FCEE21",
-                textAlign: "center",
-                fontSize: "20px",
-              }}
-            >
-              View More
-            </button>
-          </Link>
-        </div> */}
       </div>
       <NewsLetterPopUp />
     </>
