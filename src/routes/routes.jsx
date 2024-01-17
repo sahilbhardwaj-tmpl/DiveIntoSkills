@@ -26,7 +26,7 @@ function routes() {
       component: <Blogs />,
     },
     {
-      path: "/SinglePost",
+      path: "/SinglePost/:id",
       component: <SingleBlog />,
     },
   ];
