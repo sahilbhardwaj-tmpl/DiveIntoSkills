@@ -38,9 +38,10 @@ function Home() {
       : description;
   };
   const formatDateString = (dateString) => {
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(dateString).toLocaleDateString(undefined, options);
+    const unformatted = new Date(dateString).toLocaleDateString(undefined,{ day: '2-digit', month: '2-digit', year: 'numeric' }).split("/");
+    return [unformatted[1], unformatted[0], unformatted[2]].join("/");
   };
+
   return (
     <>
       <div className="hero-section-for-desktop">
