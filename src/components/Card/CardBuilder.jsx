@@ -1,7 +1,6 @@
 import React from "react";
 import "./CardBuilderStyles.css";
 function Card(props) {
-  console.log(props.category);
   return (
     <div className="card">
       <div className="image_container">

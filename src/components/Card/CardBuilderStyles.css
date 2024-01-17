@@ -14,12 +14,6 @@
   }
   .image_container {
     position: relative;
-    display: inline-block;
-  }
-  .card-image {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
   }
   .category-text{
     display: flex;
