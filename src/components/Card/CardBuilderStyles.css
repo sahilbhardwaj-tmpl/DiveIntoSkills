@@ -48,6 +48,11 @@
   .card-description {
     color: black;
     font-size: 0.7em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+    
   }
   
   .card-footer {
