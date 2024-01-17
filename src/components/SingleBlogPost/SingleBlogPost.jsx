@@ -1,4 +1,6 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./SingleBlogPostStyles.css";
 import author_pic from "../../assets/author_pic.png";
 import Blog_Img from "../../assets/Blog_Img.png";
@@ -11,44 +13,89 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { ClipLoader } from "react-spinners";
 
 function SingleBlogPost() {
-  const data = {
-    title:
-      "There is no one who loves pain itself, who seeks after it and wants to have it, because it is pain",
-    author: {
-      image: author_pic,
-      name: "Ahmad Raza",
-    },
-    date: "25/03/2022",
-    imageUrl: Blog_Img,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra arcu imperdiet lectus pharetra, at scelerisque augue ultrices. Ut in condimentum turpis. Nunc pulvinar quis nisi sed fermentum. Nulla facilisi. Aenean at augue quis elit rutrum sollicitudin. Quisque congue et magna vel condimentum. In quis sem ut magna dictum feugiat eu vel ex. Mauris elementum diam eu tempus aliquet. Mauris tempor, ex eget auctor molestie, orci justo commodo orci, sit amet placerat tellus massa sed augue. Donec non fermentum leo, at tincidunt tellus. Maecenas ac pharetra justo. Sed commodo, ligula vel aliquam varius, enim metus eleifend felis, id interdum purus nunc non lectus Aenean a magna aliquam, pulvinar elit consectetur, consectetur eros. Morbi laoreet eu enim eu ultricies. Cras rutrum sit amet tortor sed mollis. Donec non enim efficitur, porta mauris vitae, ultrices velit. Quisque et lacus mollis nibh sollicitudin tristique ut vitae nunc. Vestibulum eu est arcu. Phasellus quis neque orci. Cras vel consequat tellus, sit amet congue neque.dictum arcu nec, dapibus urna. Quisque et metus varius, rhoncus nunc a, vestibulum lacus. Aliquam eget malesuada quam. Nulla eget sapien convallis, tristique nulla et, imperdiet lorem. Quisque sed lacus tellus. Proin tincidunt sapien euismod libero aliquet, nec vulputate turpis condimentum. Sed pellentesque nibh ac fermentum venenatis. Aenean a magna aliquam, pulvinar elitdictum arcu nec, dapibus urna. Quisque et metus varius, rhoncus nunc a, vestibulum lacus. Aliquam eget malesuada quam. Nulla eget sapien convallis, tristique nulla et, imperdiet lorem. Quisque sed lacus tellus. Proin tincidunt sapien euismod libero aliquet, nec vulputate turpis condimentum. Sed pellentesque nibh ac fermentum venenatis. Aenean a magna aliquam, pulvinar elit",
+  const { id } = useParams();
+  const [blogData, setBlogData] = useState(null);
+  const [relatedBlogData, setRelatedBlogData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://diveintoskill.onrender.com/blogs/${id}`
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setBlogData(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://diveintoskill.onrender.com/blogs/related/${id}`
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setRelatedBlogData(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+  const formatDateString = (dateString) => {
+    const unformatted = new Date(dateString).toLocaleDateString(undefined,{ day: '2-digit', month: '2-digit', year: 'numeric' }).split("/");
+    return [unformatted[1], unformatted[0], unformatted[2]].join("/");
   };
 
   return (
     <>
-      <div className="single-blog-post">
-        <h2 className="blog-title">{data.title}</h2>
+      {loading ? (
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <ClipLoader color="#183114" loading={loading} size={60} />
+        </div>
+      ) : (
+        <div className="single-blog-post">
+          <h2 className="blog-title">{blogData.title}</h2>
 
-        <div className="author-section">
-          <div className="author-info">
-            <img
-              src={data.author.image}
-              alt={data.author.name}
-              className="author-image"
-            />
-            <p>{data.author.name}</p>
+          <div className="author-section">
+            <div className="author-info">
+              <img
+                src={blogData.author.photo}
+                alt={"Author Image"}
+                className="author-image"
+              />
+              <p>{blogData.author.name}</p>
+            </div>
+            <p className="blog-date">{formatDateString(blogData.createdAt)}</p>
           </div>
-          <p className="blog-date">{data.date}</p>
-        </div>
 
-        <img src={data.imageUrl} alt="Blog Image" className="blog-image" />
+          <img src={blogData.link} alt="Blog Image" className="blog-image" />
 
-        <div className="blog-description">
-          <p>{data.description}</p>
+          <div className="blog-description">
+            <p>{blogData.description}</p>
+          </div>
         </div>
-      </div>
+      )}
       <div className="social_media_links">
         <h2 style={{ textAlign: "center" }}>Sharing is Caring</h2>
         <div className="social_media_icons">
@@ -167,7 +214,6 @@ function SingleBlogPost() {
           </svg>
         </div>
       </div>
-
       <div className="related-blogs-container">
         <h2
           className="Read_Related_Blogs"
@@ -176,58 +222,77 @@ function SingleBlogPost() {
           Read Related Blogs
         </h2>
       </div>
+      (
       <div className="Swiper-container-for-desktop">
-        <div className="Swiper">
-          <Swiper
-            modules={[Navigation, Pagination, A11y]}
-            spaceBetween={10}
-            slidesPerView={3}
-            navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-          >
-            {CardData.slice(0,4).map((data, indx) => (
-              <SwiperSlide>
-                <CardBuilder
-                  img={data.blogImg}
-                  title={data.title}
-                  description={data.description}
-                  date={data.date}
-                  author={data.author}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        {loading ? (
+          <div style={{ textAlign: "center", marginTop: "20px" }}>
+            <ClipLoader color="#183114" loading={loading} size={60} />
+          </div>
+        ) : (
+          <div className="Swiper">
+            <Swiper
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={10}
+              slidesPerView={3}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={() => console.log("slide change")}
+            >
+              {relatedBlogData.map((data) => (
+                <SwiperSlide>
+                  <CardBuilder
+                    key={data.id}
+                    img={data.link}
+                    title={data.title}
+                    description={data.description}
+                    date={formatDateString(data.createdAt)}
+                    author={data.author.name}
+                    category={data.blogCategory.category}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        )}
       </div>
+      )
       <div className="Swiper-container-for-mobile">
-        <div className="Swiper">
-          <Swiper
-            modules={[Navigation, Pagination, A11y]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-          >
-            {CardData.slice(0,4).map((data, indx) => (
-              <SwiperSlide>
-                <CardBuilder
-                  img={data.blogImg}
-                  title={data.title}
-                  description={data.description}
-                  date={data.date}
-                  author={data.author}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        {loading ? (
+          <div style={{ textAlign: "center", marginTop: "20px" }}>
+            <ClipLoader color="#183114" loading={loading} size={60} />
+          </div>
+        ) : (
+          <div className="Swiper">
+            <Swiper
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={50}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={() => console.log("slide change")}
+            >
+              {relatedBlogData.slice(0, 4).map((data) => (
+                <SwiperSlide>
+                  <CardBuilder
+                    key={data.id}
+                    img={data.link}
+                    title={data.title}
+                    description={data.description}
+                    date={formatDateString(data.createdAt)}
+                    author={data.author.name}
+                    category={data.blogCategory.category}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        )}
       </div>
+      )
     </>
   );
 }
