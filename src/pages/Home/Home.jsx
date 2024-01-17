@@ -6,7 +6,7 @@ import NewsLetterPopUp from "../../components/NewsLetterPopUp/NewsLetterPopUp";
 import CardBuilder from "../../components/Card/CardBuilder";
 import HeroSectionForMobile from "../../components/HeroSection/HeroSectionForMobile";
 import { ClipLoader } from "react-spinners";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 function Home() {
   const [limitedBlogs, setLimitedBlogs] = useState([]);
@@ -21,7 +21,7 @@ function Home() {
           const data = await response.json();
           setLimitedBlogs(data);
         } else {
-          toast.error('Failed to load blogs');
+          toast.error("Failed to load blogs");
           console.error("Failed to fetch data");
         }
       } catch (error) {
@@ -63,18 +63,13 @@ function Home() {
         </h2>
         <div className="Latest-blog-cards">
           {limitedBlogs.length === 0 ? (
-
-            <ClipLoader
-              color="#183114"
-              loading={true}
-              size={60}
-            />
+            <ClipLoader color="#183114" loading={true} size={60} />
           ) : (
             limitedBlogs.map((data) => (
               <Link
                 key={data.id}
                 className="remove-decoration"
-                to="/SinglePost"
+                to={`/SinglePost/${data.id}`}
               >
                 <CardBuilder
                   key={data.id}
@@ -89,21 +84,24 @@ function Home() {
             ))
           )}
         </div>
-        <div style={{ textAlign: "center" }}>
-          <Link className="remove-decoration" to="/Blogs">
-            <button
-              className="btn-styles"
-              style={{
-                cursor: "pointer",
-                color: "#FCEE21",
-                textAlign: "center",
-                fontSize: "20px",
-              }}
-            >
-              Read More
-            </button>
-          </Link>
-        </div>
+
+        {limitedBlogs.length > 0 && (
+          <div style={{ textAlign: "center" }}>
+            <Link className="remove-decoration" to="/Blogs">
+              <button
+                className="btn-styles"
+                style={{
+                  cursor: "pointer",
+                  color: "#FCEE21",
+                  textAlign: "center",
+                  fontSize: "20px",
+                }}
+              >
+                Read More
+              </button>
+            </Link>
+          </div>
+        )}
 
         {/* <h2
           style={{
