@@ -1,6 +1,8 @@
 .newsletter-popup-container {
     display: flex;
     justify-content: center;
+    padding-bottom: 70px;
+    padding-top: 40px;
 
 }
 
@@ -14,21 +16,20 @@
 }
 
 .newsletter-popup {
-    width: 700px;
-    height: 220px;
+    width: 900px;
+    height: 250px;
     display: flex;
     border-radius: 20px;
     background: linear-gradient(90deg, #183114 0%, #446129 100%);
 }
 
 .img_container {
-    text-align: center;
     padding: 20px;
+    margin-top: 25px;
 }
 
 .image-container img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
 }
 
 .text_container {
@@ -39,13 +40,13 @@
 
 .txt-color {
     color: #FCEE21;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 16px;
 }
 
 .txt-color-p {
     color: #DCDE9F;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 /* SubscribeForm.css */
@@ -55,7 +56,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    height: 40px;
+    height: 50px;
     border: 2px solid #FCEE21;
     border-radius: 50px;
     overflow: hidden;
@@ -75,6 +76,7 @@
 }
 .email-input::placeholder{
     color: #FCEE21;
+    font-size: 22px;
 }
 
 .subscribe-button {
@@ -86,6 +88,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 150px;
+    font-size: 22px;
 }
 
 
@@ -93,11 +96,14 @@
     .newsletter-popup {
         flex-direction: column;
         height: auto;
+        width: 800px;
+        
     }
 
     .img_container,
     .text_container {
         padding: 10px;
+        text-align: center;
     }
 
     .newsletter-popup {
@@ -116,6 +122,12 @@
         padding-left: 15px;
         padding-bottom: 10px;
     }
-
+    .email-input::placeholder{
+        font-size: 16px;
+    }
+    .subscribe-button {
+        width: 160px;
+        font-size: 16px;
+    }
    
 }
