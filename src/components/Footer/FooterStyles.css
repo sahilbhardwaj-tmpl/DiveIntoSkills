@@ -27,12 +27,7 @@
     display: flex;
     justify-content: space-between;
 }
-.flex-row_1{
-    margin-right: 80px;
-}
-.flex-row_1{
-    margin-right: 80px;
-}
+
 .flex-row_1>li{
     cursor: pointer;
     font-size: 25px;
@@ -99,7 +94,6 @@
         align-items: center;
         margin-top: 20px;  
         justify-content: center;
-        padding-left: 90px;
         gap: 30px;
     }
     .flex-row_2>li{

@@ -2,37 +2,37 @@ import React from 'react'
 import './AboutStyles.css'
 import DiveIntoSkills from '../../assets/Dive_into_skills.png'
 import profilePic from '../../assets/pic.png'
+import { Link } from 'react-router-dom'
 
 function About() {
     return (
         <>
             <div className='container'>
-                <h2 style={{ textAlign: 'center',color:'black' }}>All About “Dive Into Skills”</h2>
+                <p className="about-section-heading">All About “Dive Into Skills”</p>
                 <div className='About-container'>
-
                     <div className='txtContainer'>
-                        <p style={{ color: '#000', fontSize: '20px' }}>"Dive Into Skills" is a platform where you can learn about software development. The purpose behind  "Dive Into Skills" is to educate people about Programming and technology and to raise awareness of skills. Here I will share knowledgeable content about "free courses on different platforms,  tutorials on different topics related to software development". I hope by using this platform, you will learn many valuable skills.</p>
+                        <p className='about-section-p'style={{ color: '#000' }}>"Dive Into Skills" is a platform where you can learn about software development. The purpose behind  "Dive Into Skills" is to educate people about Programming and technology and to raise awareness of skills. Here I will share knowledgeable content about "free courses on different platforms,  tutorials on different topics related to software development". I hope by using this platform, you will learn many valuable skills.</p>
                     </div>
                     <div className='imageContainer'>
-                        <img src={DiveIntoSkills} alt='Vector Image' style={{ width: '230px', height: '230px' }} />
+                        <img src={DiveIntoSkills} alt='Vector Image' />
                     </div>
                 </div>
             </div>
             <div className='container'>
-                <h2 style={{ textAlign: 'center',color:'black' }}>Master Mind behind "Dive Into Skills"</h2>
+                <p  className="about-section-heading">Master Mind behind "Dive Into Skills"</p>
                 <div className='About-container'>
-
                     <div className='txtContainer'>
-                        <h3>Ahmad Raza</h3>
-                        <p style={{ color: '#000', fontSize: '20px' }}>I am Ahmad Raza. I am a student of bachelors of Software Engineering and also a MERN Stack Developer, UI/UX Designer and Content Creator. I'm also a community mentor at iConnect Pakistan. Know More</p>
+                        <p className='author-name'>Ahmad Raza</p>
+                        <p className='about-section-p'>I am Ahmad Raza. I am a student of bachelors of Software Engineering and also a MERN Stack Developer, UI/UX Designer and Content Creator. I'm also a community mentor at iConnect Pakistan.</p>
+                        <p className='about-section-p'><Link to='/know more' style={{color:'black'}}>Know More</Link></p>
                     </div>
-                    <div className='imageContainer'>
-                        <img src={profilePic} alt='Vector Image' style={{ width: '250px', height: '300px' }} />
+                    <div className='image-Container'>
+                        <img src={profilePic} alt='Vector Image' />
                     </div>
                 </div>
             </div>
 
-            <div className='socialLinks'>
+            {/* <div className='socialLinks'>
                 <h2 style={{ textAlign: 'center',color:'black' }}>Find us on other social media platforms</h2>
                 <div className='socialMediaLinks'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" fill="none">
@@ -78,7 +78,7 @@ function About() {
                         </defs>
                     </svg>
                 </div>
-            </div>
+            </div> */}
 
         </>
     )
