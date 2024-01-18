@@ -19,7 +19,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your logic to handle form submission here
+   
     console.log("Form submitted:", formData);
     setFormData({
       yourName: "",
@@ -139,7 +139,7 @@ function Contact() {
                 ></textarea>
                 <div className="center">
                   <button className="button" type="submit">
-                    <p style={{ fontSize: "40px" }}>Send</p>
+                    <p className="send-btn">Send</p>
                   </button>
                   <p className="or">or</p>
                 </div>

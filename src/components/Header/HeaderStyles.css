@@ -9,7 +9,7 @@
     padding-bottom: 2.5rem;
     position: fixed; 
     width: 100vw;
-    height: 90px;
+    height: 60px;
     z-index: 10;
     background: linear-gradient(90deg, #183114 0%, #446129 100%);
     backdrop-filter: blur(10px);
