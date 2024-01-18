@@ -49,16 +49,17 @@ function Home() {
       </div>
 
       <div className="limited-blog-section">
-        <h2
+        <p
           style={{
             fontWeight: "700",
-            fontSize: "34px",
+            fontSize: "40px",
             textAlign: "center",
             padding: "20px",
+            color:'#183114'
           }}
         >
           Latest Blogs
-        </h2>
+        </p>
         <div className="Latest-blog-cards">
           {limitedBlogs.length === 0 ? (
             <ClipLoader color="#183114" loading={true} size={60} />
@@ -93,6 +94,7 @@ function Home() {
                   color: "#FCEE21",
                   textAlign: "center",
                   fontSize: "20px",
+                  padding: "20px",
                 }}
               >
                 Read More
