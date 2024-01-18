@@ -51,10 +51,10 @@ function Home() {
       <div className="limited-blog-section">
         <p
           style={{
-            fontWeight: "700",
+            fontWeight: "900",
             fontSize: "40px",
             textAlign: "center",
-            padding: "20px",
+            padding: "40px",
             color:'#183114'
           }}
         >
@@ -85,7 +85,7 @@ function Home() {
         </div>
 
         {limitedBlogs.length > 0 && (
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center" ,padding: "40px"}}>
             <Link className="remove-decoration" to="/Blogs">
               <button
                 className="btn-styles"
@@ -93,8 +93,7 @@ function Home() {
                   cursor: "pointer",
                   color: "#FCEE21",
                   textAlign: "center",
-                  fontSize: "20px",
-                  padding: "20px",
+                  fontSize: "30px",
                 }}
               >
                 Read More
