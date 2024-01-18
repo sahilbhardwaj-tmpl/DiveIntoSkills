@@ -15,7 +15,7 @@
     backdrop-filter: blur(10px);
 }
 .dive-into-skills-heading{
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700; 
     color: #FCEE21;
 }
@@ -36,7 +36,7 @@
     padding-right: 2rem;
 }
 .nav-item {
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
     transition: color 0.3s;
