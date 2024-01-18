@@ -56,7 +56,10 @@
 .info-p{
     font-size: 25px;
 }
-
+.txt-p{
+    color: #DCDE9F;
+    font-size: 20px
+}
 @media only screen and (max-width: 767px) {
     .footer{
         background: #183114;
@@ -81,7 +84,10 @@
         margin-top: 10px; 
         
     }
-   
+    .txt-p{
+        font-size: 16px;
+
+    }
     .for-mobile{
         display: flex;
         justify-content: center;
@@ -93,7 +99,8 @@
         align-items: center;
         margin-top: 20px;  
         justify-content: center;
-        padding-left: 80px;
+        padding-left: 90px;
+        gap: 30px;
     }
     .flex-row_2>li{
         font-size: 20px;
@@ -130,7 +137,7 @@
         margin-left: 0px;
     }
     .info-p{
-        font-size: 20px;
+        font-size: 18px;
     }
     .social-media-links{
         margin-top: 20px;
