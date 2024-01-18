@@ -99,6 +99,11 @@
         width: 800px;
         
     }
+    .text_container {
+        margin-top: 10px;
+        
+    
+    }
 
     .img_container,
     .text_container {
@@ -110,10 +115,10 @@
         width: 100%;
     }
     .email-input{
-        width: 200px;
+        width: 180px;
     }
     .subscribe-button {
-        width: 80px;
+        width: 60px;
     }
     .txt-color {
         text-align: center;
@@ -126,8 +131,12 @@
         font-size: 16px;
     }
     .subscribe-button {
-        width: 160px;
+        width: 140px;
         font-size: 16px;
     }
+    .txt-color-p {
+        font-size: 16px;
+    }
+    
    
 }
