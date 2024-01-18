@@ -5,7 +5,6 @@
     background: linear-gradient(90deg, #183114 0.75%, #446129 100%);
 }
 .main-heading{
-    /* text-align: center; */
     color:#FCEE21
 }
 .text-and-image-container{
@@ -25,4 +24,13 @@
 }
 .subheading-container>p{
     color: white;
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; 
+      }
+    
+      p {
+        font-size: 0.9em; 
+      }
 }
