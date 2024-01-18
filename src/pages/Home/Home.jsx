@@ -88,13 +88,7 @@ function Home() {
           <div style={{ textAlign: "center" ,padding: "40px"}}>
             <Link className="remove-decoration" to="/Blogs">
               <button
-                className="btn-styles"
-                style={{
-                  cursor: "pointer",
-                  color: "#FCEE21",
-                  textAlign: "center",
-                  fontSize: "30px",
-                }}
+                className="buton"
               >
                 Read More
               </button>
