@@ -1,27 +1,26 @@
 .footer{
     background: #183114;
-    padding: 25px 60px 25px 60px;
+    padding: 40px 150px 40px 150px;
 
 }
 .txt{
-    width: 300px;
+    width: 340px;
 }
 .text-container{
     display: flex;
     color: #DCDE9F;
     justify-content:space-between;
-    padding: 0px 10px 0px 10px;
     margin-top: 20px;
 }
 
 .social-media-links{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 10px;
     justify-content: center;
-    margin-left: 60px;
+    
 
 }
 .info{
@@ -31,23 +30,33 @@
 .flex-row_1{
     margin-right: 80px;
 }
-.flex-row_1>a>li{
-    cursor: pointer;
-    margin-top: 10px;
+.flex-row_1{
+    margin-right: 80px;
 }
-.flex-row_2>a>li{
+.flex-row_1>li{
     cursor: pointer;
-    margin-top: 10px;
+    font-size: 25px;
+}
+.flex-row_1>li:not(:first-child){
+    margin-top: 8px;
+    
+}
+.flex-row_2>li{
+    cursor: pointer;
+    font-size: 25px;
+}
+.flex-row_2>:not(:first-child){
+    margin-top: 8px;
+    
+}
+.flex-row_2>li>a{
+    color: #DCDE9F;
+    text-decoration: none;
+}
+.info-p{
+    font-size: 25px;
 }
 
-.flex-row_1>a{
-    color: #DCDE9F;
-    text-decoration: none;
-}
-.flex-row_2>a{
-    color: #DCDE9F;
-    text-decoration: none;
-}
 @media only screen and (max-width: 767px) {
     .footer{
         background: #183114;
@@ -70,28 +79,46 @@
 
     .txt {
         margin-top: 10px; 
+        
+    }
+   
+    .for-mobile{
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
     .flex-row_1{
         display: flex;
-        gap: 20px;
+        gap: 10px;
         align-items: center;
-        margin-top: 20px;
-        margin-right: 18px;
-        
+        margin-top: 20px;  
+        justify-content: center;
+        padding-left: 80px;
     }
-    .flex-row_1>a{
-        padding-left: 18px;
+    .flex-row_2>li{
+        font-size: 20px;
+        margin-top: 0px;
+    }
+    .flex-row_1>li{
+        font-size: 20px;
         
     }
     .flex-row_2{
         display: flex;
-        gap: 10px;
         align-items: center;
         margin-top: 20px;
-        margin-left: 20px;
+        padding-left: 20px;
     }
-    .flex-row_2>a{
+    .flex-row_2>li{
         padding-right: 18px;
+    }
+    .flex-row_1>li:not(:first-child){
+        margin-top: 0px;
+        
+    }
+    .flex-row_2>li:not(:first-child){
+        margin-top: 0px;
+        
     }
     .info{
         flex-direction: column;
@@ -101,5 +128,14 @@
     }
     .social-media-links{
         margin-left: 0px;
+    }
+    .info-p{
+        font-size: 20px;
+    }
+    .social-media-links{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    
     }
 }

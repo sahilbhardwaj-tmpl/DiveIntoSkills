@@ -16,12 +16,12 @@
     width: 40%;
   }
   
-  h1 {
+  .h1 {
     font-size: 3em;
     margin-bottom: 10px;
   }
   
-  p {
+  .p {
     font-size: 2em;
     
   }
