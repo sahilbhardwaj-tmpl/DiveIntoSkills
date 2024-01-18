@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 330px;
+    width: 300px;
   }
 .search-bar-input {
     width: 100%;
@@ -10,7 +10,7 @@
     border: none;
     border-bottom: 1px solid #FCEE21;
     outline: none;
-    font-size: 26px;
+    font-size: 30px;
     color: #FCEE21;
     background: transparent;
     padding-right: 45px;
@@ -22,7 +22,7 @@
   .search-icon {
     position: absolute;
     right: 0px;
-    top: 6px;
+    top: 8px;
     cursor: pointer;
     font-size: 28px;
   }
