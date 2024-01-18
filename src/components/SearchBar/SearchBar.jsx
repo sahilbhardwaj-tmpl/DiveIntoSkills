@@ -43,7 +43,7 @@ function SearchBar() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <span  className="search-icon">{<FaSearch style={{width:'50px',height:'25px',color:'yellow'}}/>}</span>
+                <span  className="search-icon">{<FaSearch className='fa' style={{width:'60px',height:'35px',color:'yellow'}}/>}</span>
             </div>
             {searchResults.length > 0 && (
                 <div className="result-dialog-box">
