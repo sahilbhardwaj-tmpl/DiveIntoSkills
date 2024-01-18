@@ -1,17 +1,12 @@
 
-.logo-heading{
-    font-size: 24px;
-    font-weight: 700;
-    color: #FCEE21
-}
 .header {
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     position: fixed; 
     width: 100vw;
     height: 60px;
@@ -20,7 +15,7 @@
     backdrop-filter: blur(10px);
 }
 .dive-into-skills-heading{
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 700; 
     color: #FCEE21;
 }
@@ -28,9 +23,9 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
     transition: 0.2s;
 }
-.search-bar-comp{
-    margin-left: 120px;
-}
+/* .search-bar-comp{
+    margin-left: 50px;
+} */
 .nav-menu {
     display: flex;
     justify-content: center;
@@ -38,10 +33,10 @@
 }
 
 .nav-menu li {
-    padding-right: 1rem;
+    padding-right: 2rem;
 }
 .nav-item {
-    font-size: 20px;
+    font-size: 35px;
     color: white;
     cursor: pointer;
     transition: color 0.3s;
