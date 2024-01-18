@@ -15,7 +15,7 @@ function Footer() {
         </div>
         <div className="text-container">
           <div className="txt">
-            <p style={{ color: "#DCDE9F", fontSize: "20px" }}>
+            <p className='txt-p' style={{  }}>
               The latest articles and courses to help you upgrade your skills
               and learn the latest trends. Master web Development with these
               amazing resources that are available for free!
