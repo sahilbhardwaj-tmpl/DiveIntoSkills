@@ -8,7 +8,7 @@ import CardBuilder from "../Card/CardBuilder";
 import axios from "axios";
 function LatestBlogs() {
     const [pageNumber, setPageNumber] = useState(1);
-    const itemsPerPage = 10;
+    const itemsPerPage = 9;
     const [blogs, setBlogs] = useState([]);
     const [hasMoreBlogs, setHasMoreBlogs] = useState(true);
   
@@ -40,14 +40,20 @@ function LatestBlogs() {
     return (
       <>
         <div className="blog-page">
-          <h1 style={{ textAlign: "center", marginTop: "20px" }}>Latest Blogs</h1>
+          <p className="latest-blog-heading"style={{ }}>Latest Blogs</p>
   
           <div className="blog-layout">
             <div className="category-section">
-              <h2 className="category-heading">Categories</h2>
+              <p className="category-heading">Categories</p>
               <div className="categories">
                 <ul className="category-links">
-                 
+                  <li><p className="each-category">Category 1</p></li>
+                  <li><p className="each-category">Category 1</p></li>
+                  <li> <p className="each-category">Category 1</p></li>
+                  <li><p className="each-category">Category 1</p></li>
+                  <li><p className="each-category">Category 1</p></li>
+                  <li><p className="each-category">Category 1</p></li>
+   
                 </ul>
               </div>
             </div>
@@ -74,7 +80,8 @@ function LatestBlogs() {
                       cursor: 'pointer',
                       color: '#FCEE21',
                       textAlign: 'center',
-                      fontSize: '20px',
+                      fontSize: '30px',
+                      
                     }}
                     onClick={handleLoadMore}
                   >
