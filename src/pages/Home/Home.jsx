@@ -37,6 +37,7 @@ function Home() {
     const unformatted = new Date(dateString).toLocaleDateString(undefined,{ day: '2-digit', month: '2-digit', year: 'numeric' }).split("/");
     return [unformatted[1], unformatted[0], unformatted[2]].join("/");
   };
+  
 
   return (
     <>
