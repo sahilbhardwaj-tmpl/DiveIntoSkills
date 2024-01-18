@@ -41,6 +41,10 @@
   color: #dcde9f;
   font-size: 1.9em;
 }
+.address-icons{
+  max-height: 50px;
+  max-width: 50px;
+}
 .right-section-text{
   color: #dcde9f;
   font-size: 3.2em;
