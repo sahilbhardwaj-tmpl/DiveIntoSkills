@@ -120,10 +120,11 @@
     .subscribe-button {
         width: 60px;
     }
-    /* .txt-color {
+    .txt-color {
         text-align: center;
-    } */
+    }
     .txt-color-p {
+        text-align: start;
         padding-left: 15px;
         padding-bottom: 10px;
     }
