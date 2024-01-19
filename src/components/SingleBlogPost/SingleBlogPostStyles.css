@@ -109,6 +109,9 @@
 .swiper-scrollbar{
   display: none;
 }
+.swiper-pagination {
+  margin-bottom: 8px;
+}
   @media (max-width: 768px) {
     .single-blog-post {
       padding: 40px 40px 8px 40px;
@@ -141,8 +144,8 @@
     }
     .social_media_icons{
       padding-top: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
       gap: 8px;
     }
     .Read_Related_Blogs{

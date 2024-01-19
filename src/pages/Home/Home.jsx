@@ -37,7 +37,7 @@ function Home() {
     const unformatted = new Date(dateString).toLocaleDateString(undefined,{ day: '2-digit', month: '2-digit', year: 'numeric' }).split("/");
     return [unformatted[1], unformatted[0], unformatted[2]].join("/");
   };
-  
+  console.log(limitedBlogs);
 
   return (
     <>
@@ -49,14 +49,7 @@ function Home() {
       </div>
 
       <div className="limited-blog-section">
-        <p
-          style={{
-            fontWeight: "900",
-            fontSize: "3em",
-            textAlign: "center",
-            padding: "40px",
-            color:'#183114'
-          }}
+        <p className="limited-blogs-heading"
         >
           Latest Blogs
         </p>
@@ -76,8 +69,8 @@ function Home() {
                   title={data.title}
                   description={data.description}
                   date={formatDateString(data.createdAt)}
-                  author={data.authorId}
-                  category={data.categoryId}
+                  author={data.author.name}
+                  category={data.blogCategory.category}
                 />
               </Link>
             ))
@@ -85,7 +78,7 @@ function Home() {
         </div>
 
         {limitedBlogs.length > 0 && (
-          <div style={{ textAlign: "center" ,padding: "40px"}}>
+          <div style={{ textAlign: "center" ,paddingTop: "40px"}}>
             <Link className="remove-decoration" to="/Blogs">
               <button
                 className="buton"

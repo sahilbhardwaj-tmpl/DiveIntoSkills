@@ -100,7 +100,7 @@ function LatestBlogs() {
                     </Link>
                   ))}
                 </div>
-                <div className="btn-container">
+                <div className="btn-container" style={{paddingTop: "40px"}}>
                   {hasMoreBlogs && (
                     <button className="boton" onClick={handleLoadMore}>
                       Load More
