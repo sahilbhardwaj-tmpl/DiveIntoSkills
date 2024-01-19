@@ -96,6 +96,7 @@ function LatestBlogs() {
                         description={data.description}
                         date={formatDateString(data.createdAt)}
                         author={data.author.name}
+                        category={data.blogCategory.category}
                       />
                     </Link>
                   ))}
