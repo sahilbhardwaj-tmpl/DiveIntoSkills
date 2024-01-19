@@ -133,7 +133,7 @@ textarea::placeholder {
   }
   .left-section {
     width: 100%;
-    padding: 25px 50px 50px 50px;
+    padding: 25px 40px 50px 40px;
   }
   .right-section {
     display: flex;
@@ -166,6 +166,7 @@ textarea::placeholder {
   .tuxt{
     text-align: start;
     font-size: 1.3em;
+    word-break: break-all;
   }
   .right-section-text{
     color: #dcde9f;
