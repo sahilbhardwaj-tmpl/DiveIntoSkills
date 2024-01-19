@@ -52,7 +52,7 @@ function Home() {
         <p
           style={{
             fontWeight: "900",
-            fontSize: "40px",
+            fontSize: "3em",
             textAlign: "center",
             padding: "40px",
             color:'#183114'

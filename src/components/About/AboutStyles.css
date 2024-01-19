@@ -1,6 +1,10 @@
 .container{
-    padding: 50px;
-    height: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+  padding-top: 60px;
+  padding-bottom: 60px;
+  height: auto;
     
 }
 .About-container{
@@ -13,8 +17,7 @@
     text-align: center;
     color:'black';
     font-size: 3em;
-    margin: 20px;
-    font-weight: bold;
+    font-weight: bolder;
   }
   .about-section-p{
     font-size: 2em;
@@ -45,15 +48,15 @@
   }
   @media (max-width: 768px) {
     .container {
-        padding: 20px 15px 10px 15px;
         height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
     .About-container{
         display: flex;
         flex-direction: column;
-       
-        
       }
+      
       .txtContainer {
         margin-top: 15px;
         width: 80%;
@@ -62,8 +65,8 @@
         gap: 5px;
       }
       .about-section-heading{
-        font-size: 1.5em;
-        font-weight: bold;
+        font-size: 1.8em;
+        font-weight: bolder;
       }
       .imageContainer >img {
         width: 250px;
