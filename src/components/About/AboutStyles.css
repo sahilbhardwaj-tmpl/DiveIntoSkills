@@ -45,6 +45,18 @@
     font-size: 3em;
     font-weight: bold;
   }
+  .socialLinks{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .find-us{
+    font-size: 3em;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .socialMediaLinks{
+    padding-top: 10px;
+  }
   @media (max-width: 768px) {
     .container1{
         height: auto;
@@ -63,6 +75,7 @@
         width: 100%;
       }
       .socialMediaLinks{
+        padding-bottom: 10px;
         gap: 5px;
       }
       .about-section-heading{
@@ -87,5 +100,15 @@
       .socialLinks{
         padding-top: 30px;
       }
-    
+      .find-us{
+        font-size: 1.8em;
+        font-weight: bolder;
+        text-align: center;
+      }
+      .find-us-mob{
+        padding-left: 6%;
+        width: 96%;
+        text-align: center;
+      }
+      
   }
