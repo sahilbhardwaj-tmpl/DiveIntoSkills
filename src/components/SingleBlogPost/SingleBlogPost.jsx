@@ -2,9 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./SingleBlogPostStyles.css";
-import author_pic from "../../assets/author_pic.png";
-import Blog_Img from "../../assets/Blog_Img.png";
-import CardData from "../Card/CardData";
 import CardBuilder from "../Card/CardBuilder";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -75,7 +72,7 @@ function SingleBlogPost() {
         </div>
       ) : (
         <div className="single-blog-post">
-          <h2 className="blog-title">{blogData.title}</h2>
+          <p className="blog-title">{blogData.title}</p>
 
           <div className="author-section">
             <div className="author-info">
@@ -84,7 +81,7 @@ function SingleBlogPost() {
                 alt={"Author Image"}
                 className="author-image"
               />
-              <p>{blogData.author.name}</p>
+              <p className="author-name-singleBlogPost">{blogData.author.name}</p>
             </div>
             <p className="blog-date">{formatDateString(blogData.createdAt)}</p>
           </div>
@@ -97,12 +94,12 @@ function SingleBlogPost() {
         </div>
       )}
       <div className="social_media_links">
-        <h2 style={{ textAlign: "center" }}>Sharing is Caring</h2>
+        <p className="sharing-is-caring">Sharing is Caring</p>
         <div className="social_media_icons">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="70"
+            height="70"
             viewBox="0 0 100 100"
             fill="none"
           >
@@ -122,8 +119,8 @@ function SingleBlogPost() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="70"
+            height="70"
             viewBox="0 0 100 100"
             fill="none"
           >
@@ -136,8 +133,8 @@ function SingleBlogPost() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="70"
+            height="70"
             viewBox="0 0 100 100"
             fill="none"
           >
@@ -148,8 +145,8 @@ function SingleBlogPost() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="70"
+            height="70"
             viewBox="0 0 100 100"
             fill="none"
           >
@@ -162,8 +159,8 @@ function SingleBlogPost() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="70"
+            height="70"
             viewBox="0 0 100 100"
             fill="none"
           >
@@ -181,8 +178,8 @@ function SingleBlogPost() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="70"
+            height="70"
             viewBox="0 0 100 100"
             fill="none"
           >
@@ -195,8 +192,8 @@ function SingleBlogPost() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="70"
+            height="70"
             viewBox="0 0 100 100"
             fill="none"
           >
@@ -215,14 +212,12 @@ function SingleBlogPost() {
         </div>
       </div>
       <div className="related-blogs-container">
-        <h2
+        <p
           className="Read_Related_Blogs"
-          style={{ textAlign: "center", marginTop: "60px" }}
         >
           Read Related Blogs
-        </h2>
+        </p>
       </div>
-      (
       <div className="Swiper-container-for-desktop">
         {loading ? (
           <div style={{ textAlign: "center", marginTop: "20px" }}>
@@ -257,7 +252,7 @@ function SingleBlogPost() {
           </div>
         )}
       </div>
-      )
+      
       <div className="Swiper-container-for-mobile">
         {loading ? (
           <div style={{ textAlign: "center", marginTop: "20px" }}>
@@ -292,7 +287,7 @@ function SingleBlogPost() {
           </div>
         )}
       </div>
-      )
+      
     </>
   );
 }
