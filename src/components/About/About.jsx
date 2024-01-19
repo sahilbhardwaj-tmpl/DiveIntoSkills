@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function About() {
     return (
         <>
-            <div className='container'>
+            <div className='container1'>
                 <p className="about-section-heading">All About “Dive Into Skills”</p>
                 <div className='About-container'>
                     <div className='txtContainer'>
@@ -18,7 +18,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div className='container'>
+            <div className='container1'>
                 <p  className="about-section-heading">Master Mind behind "Dive Into Skills"</p>
                 <div className='About-container'>
                     <div className='txtContainer'>
@@ -32,7 +32,7 @@ function About() {
                 </div>
             </div>
 
-            {/* <div className='socialLinks'>
+            <div className='socialLinks'>
                 <h2 style={{ textAlign: 'center',color:'black' }}>Find us on other social media platforms</h2>
                 <div className='socialMediaLinks'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" fill="none">
@@ -78,7 +78,7 @@ function About() {
                         </defs>
                     </svg>
                 </div>
-            </div> */}
+            </div>
 
         </>
     )
