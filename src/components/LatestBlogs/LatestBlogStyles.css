@@ -2,11 +2,11 @@
   text-align: center;
    padding: 80px;
    color:#183114;
-    font-weight:bold;
+  font-weight:bold;
    font-size:40px
 }
 .blog-page{
-    width: 98vw;
+    width: 100vw;
 }
 .blog-layout{
     display: flex;
