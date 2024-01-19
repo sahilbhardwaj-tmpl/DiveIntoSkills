@@ -48,6 +48,10 @@
     color: #DCDE9F;
     text-decoration: none;
 }
+.flex-row_1>li>a{
+    color: #DCDE9F;
+    text-decoration: none;
+}
 .info-p{
     font-size: 25px;
 }
