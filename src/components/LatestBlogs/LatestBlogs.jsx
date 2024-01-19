@@ -38,6 +38,10 @@ function LatestBlogs() {
   const handleLoadMore = () => {
     setPageNumber((prevPageNumber) => prevPageNumber + 1);
   };
+  const formatDateString = (dateString) => {
+    const unformatted = new Date(dateString).toLocaleDateString(undefined,{ day: '2-digit', month: '2-digit', year: 'numeric' }).split("/");
+    return [unformatted[1], unformatted[0], unformatted[2]].join("/");
+  };
 
   return (
     <>
@@ -90,7 +94,7 @@ function LatestBlogs() {
                         img={data.link}
                         title={data.title}
                         description={data.description}
-                        date={data.createdAt}
+                        date={formatDateString(data.createdAt)}
                         author={data.author.name}
                       />
                     </Link>
