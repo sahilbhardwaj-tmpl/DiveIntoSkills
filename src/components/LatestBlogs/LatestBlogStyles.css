@@ -72,20 +72,16 @@
 .category-links li a p:hover{
   color: #5b8336 
 }
-/* .category-links li::after {
-  background-color:#555;
-  content: "";
-  width: 0px;
-  height: 2px;
-  left: 60px;
-  top: 25px;
-  transition: width 0.35s ease 0s;
-  position: absolute;
-} */
-
-/* .category-links li:hover::after {
-  width: 50%;
-} */
+.boton{
+  padding: 10px;
+  background: #183114;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 200px;
+  height: 75px;
+  color: #FCEE21;
+  font-size: 30px;
+}
   @media only screen and (max-width: 768px) {
     .latest-blog-heading{
       padding: 20px;
@@ -123,6 +119,12 @@
     .category-heading{
       margin-left: 0px;
     }
-  
+    .boton{
+      
+        width: 150px;
+        height: 55px;
+        font-size: 20px;
+      
+    }
   }
   
