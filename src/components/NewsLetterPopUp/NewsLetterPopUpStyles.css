@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     padding-bottom: 70px;
-    padding-top: 40px;
+    padding-top: 70px;
 
 }
 
@@ -11,13 +11,13 @@
     background: linear-gradient(90deg, #183114 0%, #446129 100%);
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: 15px;
     align-items: center;
 }
 
 .newsletter-popup {
     width: 900px;
-    height: 250px;
+    height: 300px;
     display: flex;
     border-radius: 20px;
     background: linear-gradient(90deg, #183114 0%, #446129 100%);
@@ -27,26 +27,30 @@
     padding: 20px;
     margin-top: 25px;
 }
-
+.email-image{
+    width: 330px;
+    height: auto;
+}
 .image-container img {
     width: 100%;
 }
 
 .text_container {
-    margin-top: 25px;
+    margin-top: 30px;
     padding: 20px;
 
 }
 
 .txt-color {
     color: #FCEE21;
-    font-size: 30px;
+    font-size: 2.3em;
     margin-bottom: 16px;
 }
 
 .txt-color-p {
     color: #DCDE9F;
-    font-size: 25px;
+    font-size: 1.6em;
+    word-spacing: 6px;
 }
 
 /* SubscribeForm.css */
@@ -56,7 +60,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    height: 50px;
+    height: 45px;
     border: 2px solid #FCEE21;
     border-radius: 50px;
     overflow: hidden;
@@ -69,8 +73,9 @@
     border: none;
     background: transparent;
     outline: none;
-    width: 240px;  
+    width: 280px;  
     color: #FCEE21;
+    padding-top: 4px;
    
     
 }
