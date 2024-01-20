@@ -1,12 +1,12 @@
 
 .header {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     position: fixed; 
     width: 100vw;
     height: 60px;
@@ -15,7 +15,7 @@
     backdrop-filter: blur(10px);
 }
 .dive-into-skills-heading{
-    font-size: 35px;
+    font-size: 36px;
     font-weight: 700; 
     color: #FCEE21;
 }
