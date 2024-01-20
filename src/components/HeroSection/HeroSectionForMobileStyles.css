@@ -34,3 +34,18 @@
         font-size: 0.9em; 
       }
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .main-container{
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+      
+    }
+    h1 {
+        font-size: 2em; 
+      }
+      .ppp {
+        margin-top: 20px;
+        font-size: 1.5em; 
+      }
+}

@@ -1,7 +1,7 @@
 
 .header {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 65px;
+    padding-right: 65px;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -33,7 +33,7 @@
 }
 
 .nav-menu li {
-    padding-right: 2rem;
+    padding-left: 2rem;
 }
 .nav-item {
     font-size: 30px;
@@ -47,7 +47,7 @@
 .hamsburger{
     display: none;
 }
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1024px) {
 
     .dive-into-skills-heading{
         display: none;

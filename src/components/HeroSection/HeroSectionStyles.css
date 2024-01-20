@@ -1,19 +1,22 @@
 .hero-container {
+    
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
+    padding-top: 130px;
+    padding-left: 65px;
+    padding-right: 65px;
     background: linear-gradient(90deg, #183114 0.75%, #446129 100%);
-    height: 100vh;
+    height: auto;
     
   }
   
   .textContainer {
-    width: 60%;
+    width: 58%;
+    padding-bottom: 165px;
   }
   
-  .image-container {
+  .image-ontainer {
     width: 40%;
+    
   }
   
   .h1 {
@@ -21,14 +24,45 @@
     margin-bottom: 10px;
   }
   
-  .p {
-    font-size: 2em;
+  .pp {
+    font-size: 1.8em;
+    word-spacing: 10px;
     
   }
   
-  img {
-    width: 100%;
+  .image-ontainer>img {
+    width: 530px;
     height: auto;
+   padding-right: 20px;
+    
   }
-  
+  @media only screen and (max-width: 1024px)  {
+    .hero-container {
+      display: flex;
+      padding-top: 60px;
+      padding-left: 45px;
+      padding-right: 45px;
+      background: linear-gradient(90deg, #183114 0.75%, #446129 100%);
+      height: auto;
+      
+    }
+    .image-ontainer>img {
+      width: 400px;
+      height: auto;
+      
+    }
+    .textContainer {
+      width: 60%;
+      padding-bottom: 105px;
+    }
+    .h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .pp {
+      font-size: 1.3em;
+      word-spacing: 10px;
+      
+    }
+  }
   

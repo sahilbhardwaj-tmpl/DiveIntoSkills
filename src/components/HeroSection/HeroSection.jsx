@@ -8,9 +8,9 @@ function HeroSection() {
                 <div className='textContainer'>
                     <h1 className='h1'style={{color:'#FCEE21'}}>The latest articles and courses to help you upgrade your skills.</h1>
 
-                    <p className='p'style={{color:'#FFF',marginTop:'25px'}}>Master Web Development with amazing resources that are available for free! Join our Newsletter and get alerted when new articles, topics or courses are published.</p>
+                    <p className='pp'style={{color:'#FFF',marginTop:'30px'}}>Master Web Development with amazing resources that are available for free! Join our Newsletter and get alerted when new articles, topics or courses are published.</p>
                 </div>
-                <div className='image-container'>
+                <div className='image-ontainer'>
                     <img src={vectorImage} alt='Vector Image' />
                 </div>
             </div>
