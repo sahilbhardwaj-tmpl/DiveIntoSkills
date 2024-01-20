@@ -4,8 +4,20 @@ import { useState } from 'react';
 import Email_icon from '../../assets/Email_icon_1-removebg-preview.png'
 function NewsLetterPopUp() {
     const [email, setEmail] = useState('');
-    const handleSubscribe = () => {
+    const handleSubscribe = async () => {
         console.log(`Subscribed with email: ${email}`);
+        try {
+            const response = await fetch('https://diveintoskill.onrender.com/subscribe', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              mode:'no-cors',
+              body: JSON.stringify(email),
+            });
+          } catch (error) {
+            console.error('Error submitting form:', error);
+          }
         setEmail('');
     };
     return (
