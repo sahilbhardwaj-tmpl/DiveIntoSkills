@@ -4,10 +4,10 @@ import { useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 function Contact() {
   const [formData, setFormData] = useState({
-    yourName: "",
-    yourEmail: "",
+    name: "",
+    email: "",
     headline: "",
-    queryDetails: "",
+    details: "",
   });
 
   const handleChange = (e) => {
@@ -17,15 +17,28 @@ function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     console.log("Form submitted:", formData);
+    try {
+      const response = await fetch('https://diveintoskill.onrender.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode:'no-cors',
+        body: JSON.stringify(formData),
+      });
+      console.log(response);
+      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
     setFormData({
-      yourName: "",
-      yourEmail: "",
+      name: "",
+      email: "",
       headline: "",
-      queryDetails: "",
+      details: "",
     });
   };
   return (
@@ -107,8 +120,8 @@ function Contact() {
                   className="input"
                   type="text"
                   id="yourName"
-                  name="yourName"
-                  value={formData.yourName}
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
                   required
@@ -119,8 +132,8 @@ function Contact() {
                   placeholder="Your Email"
                   type="email"
                   id="yourEmail"
-                  name="yourEmail"
-                  value={formData.yourEmail}
+                  name="email"
+                  value={formData.email}
                   onChange={handleChange}
                   required
                 />
@@ -139,9 +152,9 @@ function Contact() {
                   className="textarea"
                   placeholder="Details about Query"
                   id="queryDetails"
-                  name="queryDetails"
+                  name="details"
                   rows="4"
-                  value={formData.queryDetails}
+                  value={formData.details}
                   onChange={handleChange}
                   required
                 ></textarea>
