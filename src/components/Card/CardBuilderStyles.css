@@ -1,5 +1,5 @@
 .card {
-    width: 280px;
+    width: 300px;
     border: 1px solid #ddd;
     border-radius: 15px;
     overflow: hidden;
@@ -40,19 +40,23 @@
   }
   
   .card-title {
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-bottom: 8px;
     color: #183114;
+    font-weight: bolder;
+    
+    
   }
   
   .card-description {
     color: black;
-    font-size: 1em;
+    font-size: 1.1em;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4; 
+    -webkit-line-clamp: 5; 
     color: #446129;
+    word-spacing: 6px;
     
   }
   
