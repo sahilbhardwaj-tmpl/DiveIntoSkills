@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { ClipLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 function SingleBlogPost() {
   const { id } = useParams();
@@ -237,7 +238,7 @@ function SingleBlogPost() {
             >
               {relatedBlogData.map((data) => (
                 <SwiperSlide>
-                  <CardBuilder
+                  <Link to={`/SinglePost/${data.id}`}><CardBuilder
                     key={data.id}
                     img={data.link}
                     title={data.title}
@@ -245,7 +246,8 @@ function SingleBlogPost() {
                     date={formatDateString(data.createdAt)}
                     author={data.author.name}
                     category={data.blogCategory.category}
-                  />
+                  /></Link>
+                  
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -272,7 +274,7 @@ function SingleBlogPost() {
             >
               {relatedBlogData.slice(0, 4).map((data) => (
                 <SwiperSlide>
-                  <CardBuilder
+                  <Link to={`/SinglePost/${data.id}`}><CardBuilder
                     key={data.id}
                     img={data.link}
                     title={data.title}
@@ -280,7 +282,8 @@ function SingleBlogPost() {
                     date={formatDateString(data.createdAt)}
                     author={data.author.name}
                     category={data.blogCategory.category}
-                  />
+                  /></Link>
+                  
                 </SwiperSlide>
               ))}
             </Swiper>
