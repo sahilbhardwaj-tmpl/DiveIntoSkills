@@ -27,7 +27,7 @@ function NewsLetterPopUp() {
                 <div className='container-div'>
                     <div className="newsletter-popup">
                         <div className="img_container">
-                            <img src={Email_icon} alt="Vector Image" style={{ width: '250px', height: '200px' }} ></img>
+                            <img src={Email_icon} alt="Vector Image" className='email-image' ></img>
                         </div>
                         <div className="text_container">
                             <h2 className='txt-color'>Subscribe to Our Newsletter</h2>
@@ -40,7 +40,7 @@ function NewsLetterPopUp() {
                     <div className="input-container">
                         <input
                             type="email"
-                            placeholder="Enter your email"
+                            placeholder="Email Address"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             className="email-input"
