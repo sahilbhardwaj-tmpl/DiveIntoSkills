@@ -56,6 +56,12 @@
   
   color: rgb(252, 238, 33);
 }
+.No-result-found{
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  padding-top: 150px;
+}
 
 @media (max-width: 768px) {
   .search-bar {

@@ -75,8 +75,7 @@
     outline: none;
     width: 280px;  
     color: #FCEE21;
-    padding-top: 4px;
-    font-size: 22px;
+    font-size: 20px;
     
 }
 .email-input::placeholder{

@@ -2,29 +2,43 @@ import React from "react";
 import "./NewsLetterPopUpStyles.css";
 import { useState } from "react";
 import Email_icon from "../../assets/Email_icon_1-removebg-preview.png";
+import { toast } from "react-hot-toast";
 function NewsLetterPopUp() {
   const [email, setEmail] = useState("");
   const handleSubscribe = async () => {
+    if (!email.trim()) {
+      toast.error('Email address cannot be empty');
+      return;
+    }
+    if (!email.includes('@gmail.com')) {
+      toast.error('Invalid email address');
+      return;
+    }
     console.log(`Subscribed with email: ${email}`);
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    try {
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({
-      email: email,
-    });
+      const raw = JSON.stringify({ email });
 
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
 
-    fetch("https://diveintoskill.onrender.com/subscribe", requestOptions)
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
-
+      const response = await fetch("https://diveintoskill.onrender.com/subscribe", requestOptions);
+      const result = await response.text();
+      console.log(result);
+      if (result && result.error && result.error === "Email is already subscribed") {
+        toast.warning('Email is already subscribed');
+      } else {
+        toast.success('Subscribed successfully');
+      }
+    } catch (error) {
+    toast.error(`Error: ${error.message}`);
+  }
     setEmail("");
   };
 
@@ -57,6 +71,7 @@ function NewsLetterPopUp() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="email-input"
+              required
             />
             <button onClick={handleSubscribe} className="subscribe-button">
               Subscribe
