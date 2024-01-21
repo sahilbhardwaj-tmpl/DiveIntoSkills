@@ -11,8 +11,28 @@ function LatestBlogs() {
   const itemsPerPage = 9;
   const [blogs, setBlogs] = useState([]);
   const [hasMoreBlogs, setHasMoreBlogs] = useState(true);
-  
-
+  const [c, setCategories] = useState([]);
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch(
+          "https://diveintoskill.onrender.com/category"
+        );
+        if (response.ok) {
+          const data = await response.json();
+          console.log(data[0].category);
+          console.log(data);
+          setCategories(data);
+        } else {
+          toast.error("Failed to fetch catrgories");
+          console.error("Failed to fetch catrgories");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    fetchCategories();
+  }, []);
   useEffect(() => {
     fetchBlogs();
   }, [pageNumber]);
@@ -23,7 +43,6 @@ function LatestBlogs() {
         `https://diveintoskill.onrender.com/blogs?pageno=${pageNumber}&pagesize=${itemsPerPage}`
       )
       .then((response) => {
-        console.log(response?.data, "here");
         if (response.data.length > 0) {
           setBlogs((prevBlogs) => [...prevBlogs, ...response.data]);
           setHasMoreBlogs(true);
@@ -40,7 +59,13 @@ function LatestBlogs() {
     setPageNumber((prevPageNumber) => prevPageNumber + 1);
   };
   const formatDateString = (dateString) => {
-    const unformatted = new Date(dateString).toLocaleDateString(undefined,{ day: '2-digit', month: '2-digit', year: 'numeric' }).split("/");
+    const unformatted = new Date(dateString)
+      .toLocaleDateString(undefined, {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      })
+      .split("/");
     return [unformatted[1], unformatted[0], unformatted[2]].join("/");
   };
 
@@ -56,24 +81,11 @@ function LatestBlogs() {
             <p className="category-heading">Categories</p>
             <div className="categories">
               <ul className="category-links">
-                <li>
-                  <p className="each-category">Category 1</p>
+                {c.map((data) => (
+                  <li>
+                  <p className="each-category">{data.category}</p>
                 </li>
-                <li>
-                  <p className="each-category">Category 1</p>
-                </li>
-                <li>
-                  <p className="each-category">Category 1</p>
-                </li>
-                <li>
-                  <p className="each-category">Category 1</p>
-                </li>
-                <li>
-                  <p className="each-category">Category 1</p>
-                </li>
-                <li>
-                  <p className="each-category">Category 1</p>
-                </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -101,7 +113,7 @@ function LatestBlogs() {
                     </Link>
                   ))}
                 </div>
-                <div className="btn-container" style={{paddingTop: "40px"}}>
+                <div className="btn-container" style={{ paddingTop: "40px" }}>
                   {hasMoreBlogs && (
                     <button className="boton" onClick={handleLoadMore}>
                       Load More

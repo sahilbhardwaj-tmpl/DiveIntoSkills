@@ -71,6 +71,7 @@ function NewsLetterPopUp() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="email-input"
+              name="email"
               required
             />
             <button onClick={handleSubscribe} className="subscribe-button">
