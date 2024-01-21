@@ -2,6 +2,7 @@ import React from "react";
 import "./ContactStyles.css";
 import { useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
+import toast from "react-hot-toast";
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,13 +27,12 @@ function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode:'no-cors',
         body: JSON.stringify(formData),
       });
-      console.log(response);
-      
+      toast.success('Query Sent Successfully')
     } catch (error) {
       console.error('Error submitting form:', error);
+      toast.error('Something Went Wrong');
     }
     setFormData({
       name: "",
