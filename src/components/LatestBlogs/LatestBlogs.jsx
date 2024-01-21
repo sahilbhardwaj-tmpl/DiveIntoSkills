@@ -11,27 +11,7 @@ function LatestBlogs() {
   const itemsPerPage = 9;
   const [blogs, setBlogs] = useState([]);
   const [hasMoreBlogs, setHasMoreBlogs] = useState(true);
-  useEffect(() => {
-    const fetchCategory = async () => {
-      try {
-        const response = await fetch(
-          "https://diveintoskill.onrender.com/limited-blogs"
-        );
-        if (response.ok) {
-          const data = await response.json();
-          setLimitedBlogs(data);
-        } else {
-          toast.error("Failed to load blogs");
-          console.error("Failed to fetch data");
-        }
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    };
-    if (limitedBlogs.length === 0) {
-      fetchData();
-    }
-  }, []);
+  
 
   useEffect(() => {
     fetchBlogs();
