@@ -68,7 +68,7 @@ function SingleBlogPost() {
   return (
     <>
       {loading ? (
-        <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <div style={{ textAlign: "center", marginTop: "100px" }}>
           <ClipLoader color="#183114" loading={loading} size={60} />
         </div>
       ) : (
@@ -90,7 +90,7 @@ function SingleBlogPost() {
           <img src={blogData.link} alt="Blog Image" className="blog-image" />
 
           <div className="blog-description">
-            <p>{blogData.description}</p>
+            <p className="single-blogpost-desc">{blogData.description}</p>
           </div>
         </div>
       )}
@@ -221,7 +221,7 @@ function SingleBlogPost() {
       </div>
       <div className="Swiper-container-for-desktop">
         {loading ? (
-          <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <div style={{ textAlign: "center", marginTop: "50px" }}>
             <ClipLoader color="#183114" loading={loading} size={60} />
           </div>
         ) : (
