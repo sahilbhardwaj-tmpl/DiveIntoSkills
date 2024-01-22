@@ -34,10 +34,20 @@ function Contact() {
           body: JSON.stringify(formData),
         }
       );
-      toast.success("Query Sent Successfully");
+      toast.success("Query Sent Successfully", {
+        style: {
+          background: '#183114',
+          color: "#fcee21",
+        },
+      });
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Something Went Wrong");
+      toast.error("Something Went Wrong",{
+        style: {
+          background: '#183114',
+          color: "#fcee21",
+        },
+      });
     }
     setFormData({
       name: "",

@@ -61,7 +61,7 @@
     align-items: center;
     margin-bottom: 10px;
     height: 45px;
-    border: 2px solid #FCEE21;
+    border: 1px solid #FCEE21;
     border-radius: 50px;
     overflow: hidden;
 }
@@ -128,8 +128,8 @@
         text-align: center;
     }
     .txt-color-p {
-        text-align: start;
-        padding-left: 15px;
+        text-align: center;
+    
         padding-bottom: 10px;
     }
     .email-input::placeholder{

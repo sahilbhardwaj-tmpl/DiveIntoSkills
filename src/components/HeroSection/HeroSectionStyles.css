@@ -1,7 +1,7 @@
 .hero-container {
     
     display: flex;
-    padding-top: 130px;
+    padding-top: 100px;
     padding-left: 65px;
     padding-right: 65px;
     background: linear-gradient(90deg, #183114 0.75%, #446129 100%);
@@ -11,7 +11,7 @@
   
   .textContainer {
     width: 58%;
-    padding-bottom: 165px;
+    padding-bottom: 187px;
   }
   
   .image-ontainer {

@@ -7,11 +7,22 @@ function NewsLetterPopUp() {
   const [email, setEmail] = useState("");
   const handleSubscribe = async () => {
     if (!email.trim()) {
-      toast.error('Email address cannot be empty');
+      toast.error('Email address cannot be empty',{
+        style: {
+          background: '#183114',
+          color: "#fcee21",
+        },
+      });
       return;
     }
     if (!email.includes('@gmail.com')) {
-      toast.error('Invalid email address');
+      toast.error('Invalid email address',{
+        style: {
+          background: '#183114',
+          color: "#fcee21",
+        },
+      });
+      
       return;
     }
     console.log(`Subscribed with email: ${email}`);
@@ -31,12 +42,27 @@ function NewsLetterPopUp() {
       const response = await fetch("https://diveintoskill.onrender.com/subscribe", requestOptions);
       const result =  await response.json();
       if (result && result.error) {
-        toast.error(result.error);
+        toast.error(result.error,{
+          style: {
+            background: '#183114',
+            color: "#fcee21",
+          },
+        });
       } else {
-        toast.success('Subscribed successfully');
+        toast.success('Subscribed successfully',{
+          style: {
+            background: '#183114',
+            color: "#fcee21",
+          },
+        });
       }
     } catch (error) {
-    toast.error(`Error: ${error.message}`);
+    toast.error(`Error: ${error.message}`,{
+      style: {
+        background: 'linear-gradient(90deg, #183114 0%, #446129 100%)',
+        color: "#fcee21",
+      },
+    });
   }
     setEmail("");
   };
