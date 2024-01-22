@@ -8,7 +8,6 @@ import { Context } from "../Layout/Layout";
 function Header() {
   const{pageName, setPageName}=useContext(Context);
   const [click, setClick] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
 
   const handleClick = () => {
     return setClick(!click);
@@ -36,27 +35,27 @@ function Header() {
             className={`nav-item ${pageName === "Home" ? "active" : "inactive"}`}
             
           >
-            <li className="nav-item">Home</li>
+            <li onClick={handleClick}className="nav-item">Home</li>
           </Link>
           <Link
             to="/Blogs"
             className={`nav-item ${pageName === "Blogs"? "active" : "inactive"}`}
           >
-            <li className="nav-item">Blogs</li>
+            <li onClick={handleClick} className="nav-item">Blogs</li>
           </Link>
           <Link
             to="/About"
            
             className={`nav-item ${pageName=== "About" ? "active" : "inactive"}`}
           >
-            <li className="nav-item">About</li>
+            <li onClick={handleClick} className="nav-item">About</li>
           </Link>
           <Link
             to="/Contact"
         
             className={`nav-item ${pageName === "Contact" ? "active" : "inactive"}`}
           >
-            <li className="nav-item">Contact</li>
+            <li onClick={handleClick} className="nav-item">Contact</li>
           </Link>
         </ul>
         <div className="hamsburger" onClick={handleClick}>
