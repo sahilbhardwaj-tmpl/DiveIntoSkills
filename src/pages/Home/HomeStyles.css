@@ -55,4 +55,15 @@
     height: 55px;
     font-size: 20px;
   }
+ 
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .Latest-blog-cards {
+    flex-wrap: wrap; 
+    gap: 30px;
+  }
+
+  .Latest-blog-cards > * {
+    width: calc(39% - 10px); 
+  }
 }
