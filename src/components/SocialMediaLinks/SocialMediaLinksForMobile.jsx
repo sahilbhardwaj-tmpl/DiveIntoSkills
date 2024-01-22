@@ -1,12 +1,12 @@
 import React from "react";
 
-function SocialMediaLinks(props) {
+function SocialMediaLinksForMobile(props) {
   return (
     <>
     <a href="https://facebook.com" target="_blank"><svg
         xmlns="http://www.w3.org/2000/svg"
-        width="55"
-        height="55"
+        width="40"
+        height="40"
         viewBox="0 0 80 80"
         fill="none"
       >
@@ -26,8 +26,8 @@ function SocialMediaLinks(props) {
       </svg></a>
     <a href="https://instagram.com"target="_blank"><svg
         xmlns="http://www.w3.org/2000/svg"
-        width="55"
-        height="55"
+        width="40"
+        height="40"
         viewBox="0 0 80 80"
         fill="none"
       >
@@ -41,8 +41,8 @@ function SocialMediaLinks(props) {
       
       <a href="https://twitter.com" target="_blank"><svg
         xmlns="http://www.w3.org/2000/svg"
-        width="55"
-        height="55"
+        width="40"
+        height="40"
         viewBox="0 0 80 80"
         fill="none"
       >
@@ -54,8 +54,8 @@ function SocialMediaLinks(props) {
       
       <a href="https://linkedin.com" target="_blank"><svg
         xmlns="http://www.w3.org/2000/svg"
-        width="55"
-        height="55"
+        width="40"
+        height="40"
         viewBox="0 0 80 80"
         fill="none"
       >
@@ -69,8 +69,8 @@ function SocialMediaLinks(props) {
       
       <a href="https://youtube.com" target="_blank"><svg
         xmlns="http://www.w3.org/2000/svg"
-        width="55"
-        height="55"
+        width="40"
+        height="40"
         viewBox="0 0 80 80"
         fill="none"
       >
@@ -89,8 +89,8 @@ function SocialMediaLinks(props) {
       
       <a href="https://slack.com" target="_blank"><svg
         xmlns="http://www.w3.org/2000/svg"
-        width="55"
-        height="55"
+        width="40"
+        height="40"
         viewBox="0 0 80 80"
         fill="none"
       >
@@ -104,8 +104,8 @@ function SocialMediaLinks(props) {
       
       <a href="https://discord.com" target="_blank"><svg
         xmlns="http://www.w3.org/2000/svg"
-        width="55"
-        height="55"
+        width="40"
+        height="40"
         viewBox="0 0 80 80"
         fill="none"
       >
@@ -126,4 +126,4 @@ function SocialMediaLinks(props) {
   );
 }
 
-export default SocialMediaLinks;
+export default SocialMediaLinksForMobile;

@@ -121,6 +121,7 @@ textarea::placeholder {
   font-size: 2em;
   color: #DCDE9F;
   padding: 15px;
+  padding-top: 20px;
 }
 .form-social-media-links{
   display: flex;
