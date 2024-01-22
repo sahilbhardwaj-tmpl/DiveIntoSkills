@@ -74,8 +74,11 @@
     background: transparent;
     outline: none;
     width: 280px;  
-    color: #FCEE21;
     font-size: 20px;
+    background-clip: text;
+    color: #FCEE21;
+    -webkit-text-fill-color: #FCEE21;
+
     
 }
 .email-input::placeholder{
