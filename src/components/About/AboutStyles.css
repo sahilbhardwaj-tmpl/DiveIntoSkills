@@ -57,6 +57,9 @@
   .socialMediaLinks{
     padding-top: 10px;
   }
+  .SocialMediaLinksForMobile{
+    display: none;
+}
   @media (max-width: 768px) {
     .container1{
         height: auto;
