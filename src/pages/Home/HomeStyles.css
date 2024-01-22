@@ -32,7 +32,7 @@
   color: #fcee21;
   font-size: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 766px) {
   .hero-section-for-desktop {
     display: none;
   }
@@ -57,13 +57,13 @@
   }
  
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) {
   .Latest-blog-cards {
-    flex-wrap: wrap; 
-    gap: 30px;
+    justify-content: space-around;
+    gap: 0;
   }
 
   .Latest-blog-cards > * {
-    width: calc(39% - 10px); 
+    width: calc(40% -10px); 
   }
 }
