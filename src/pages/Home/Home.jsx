@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import "./HomeStyles.css";
 import { Link } from "react-router-dom";
@@ -7,8 +7,12 @@ import CardBuilder from "../../components/Card/CardBuilder";
 import HeroSectionForMobile from "../../components/HeroSection/HeroSectionForMobile";
 import { ClipLoader } from "react-spinners";
 import toast from "react-hot-toast";
-
+import { Context } from "../../components/Layout/Layout";
 function Home() {
+  const{pageName, setPageName}=useContext(Context);
+  useEffect(() => {
+    setPageName('Home')
+  },[])
   const [limitedBlogs, setLimitedBlogs] = useState([]);
 
   useEffect(() => {
@@ -37,7 +41,7 @@ function Home() {
     const unformatted = new Date(dateString).toLocaleDateString(undefined,{ day: '2-digit', month: '2-digit', year: 'numeric' }).split("/");
     return [unformatted[1], unformatted[0], unformatted[2]].join("/");
   };
-  console.log(limitedBlogs);
+  // console.log(limitedBlogs);
 
   return (
     <>
@@ -82,6 +86,7 @@ function Home() {
             <Link className="remove-decoration" to="/Blogs">
               <button
                 className="buton"
+        
               >
                 Read More
               </button>
