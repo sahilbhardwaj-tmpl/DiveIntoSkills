@@ -29,10 +29,9 @@ function NewsLetterPopUp() {
       };
 
       const response = await fetch("https://diveintoskill.onrender.com/subscribe", requestOptions);
-      const result = await response.text();
-      console.log(result);
-      if (result && result.error && result.error === "Email is already subscribed") {
-        toast.warning('Email is already subscribed');
+      const result =  await response.json();
+      if (result && result.error) {
+        toast.error(result.error);
       } else {
         toast.success('Subscribed successfully');
       }

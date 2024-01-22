@@ -7,11 +7,14 @@ import { ClipLoader } from "react-spinners";
 import CardBuilder from "../Card/CardBuilder";
 import axios from "axios";
 function LatestBlogs() {
+  const [loading, setLoading] = useState(false);
   const [pageNumber, setPageNumber] = useState(1);
   const itemsPerPage = 9;
   const [blogs, setBlogs] = useState([]);
   const [hasMoreBlogs, setHasMoreBlogs] = useState(true);
   const [c, setCategories] = useState([]);
+
+  // console.log(blogs.length, 'blog length ');
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -33,11 +36,30 @@ function LatestBlogs() {
     };
     fetchCategories();
   }, []);
+  const handleCategoryClick = async (category) => {
+    setLoading(true);
+   
+    try {
+      const response = await fetch(`https://diveintoskill.onrender.com/category/${category}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      const data = await response.json();
+      setBlogs(data);
+      setHasMoreBlogs(false)
+      console.log('Data from API:', data);
+    } catch (error) {
+      console.error('Error fetching data:', error.message);
+    }finally {
+      setLoading(false);
+    }
+  };
   useEffect(() => {
     fetchBlogs();
   }, [pageNumber]);
 
   const fetchBlogs = () => {
+    setLoading(true);
     axios
       .get(
         `https://diveintoskill.onrender.com/blogs?pageno=${pageNumber}&pagesize=${itemsPerPage}`
@@ -46,8 +68,10 @@ function LatestBlogs() {
         if (response.data.length > 0) {
           setBlogs((prevBlogs) => [...prevBlogs, ...response.data]);
           setHasMoreBlogs(true);
+          setLoading(false);
         } else {
           setHasMoreBlogs(false);
+          setLoading(false);
         }
       })
       .catch((error) => {
@@ -81,8 +105,8 @@ function LatestBlogs() {
             <p className="category-heading">Categories</p>
             <div className="categories">
               <ul className="category-links">
-                {c.map((data) => (
-                  <li>
+                {c.map((data,index) => (
+                  <li  key={index} onClick={() => handleCategoryClick(data.category)}>
                   <p className="each-category">{data.category}</p>
                 </li>
                 ))}
@@ -91,7 +115,7 @@ function LatestBlogs() {
           </div>
 
           <div className="blogs-section">
-            {blogs.length === 0 ? (
+            {loading ? (
               <ClipLoader color="#183114" loading={true} size={60} />
             ) : (
               <>
