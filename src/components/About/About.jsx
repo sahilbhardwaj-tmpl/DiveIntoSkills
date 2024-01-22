@@ -57,7 +57,7 @@ function About() {
           <p className="find-us">Find us on other social media platforms</p>
         </div>
 
-        <div className="SocialMediaLinksForAbout social-media-links">
+        <div className="SocialMediaLinks social-media-links">
           <SocialMediaLinks color="#183114" />
         </div>
         <div className="SocialMediaLinksForMobile social-media-links">

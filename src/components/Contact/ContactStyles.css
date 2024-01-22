@@ -134,7 +134,24 @@ textarea::placeholder {
   gap: 10px;
   padding-bottom: 30px;
 }
+.social-media-links-for-contact{
+  margin-top: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+.SocialMediaLinksForMobileForContact{
+  display: none;
+}
 @media (max-width: 768px) {
+  .SocialMediaLinksForContact{
+    display: none;
+  }
+  .SocialMediaLinksForMobileForContact{
+    display: flex;
+  }
   .contact-container {
     flex-direction: column;
   }

@@ -57,30 +57,8 @@
   .socialMediaLinks{
     padding-top: 10px;
   }
-  .SocialMediaLinksForMobile{
-    display: none;
-}
-.SocialMediaLinksForAbout{
 
-    margin-top: 40px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-
-}
   @media (max-width: 768px) {
-    .SocialMediaLinksForAbout{
-
-      margin-top: 40px;
-      margin-bottom: 40px;
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      justify-content: center;
-  
-  }
     .container1{
         height: auto;
         padding-left: 40px;

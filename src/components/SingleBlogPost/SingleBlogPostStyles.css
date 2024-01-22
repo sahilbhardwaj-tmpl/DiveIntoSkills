@@ -159,7 +159,10 @@
 
   .Swiper {
     width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
   }
+
   .swiper-button-prev {
     display: none !important;
   }

@@ -180,10 +180,10 @@ function Contact() {
                   <p className="or">or</p>
                 </div>
                
-                  <div className="SocialMediaLinks social-media-links">
+                  <div className="SocialMediaLinksForContact social-media-links-for-contact">
                     <SocialMediaLinks color="#FCEE21" />
                   </div>
-                  <div className="SocialMediaLinksForMobile social-media-links">
+                  <div className="SocialMediaLinksForMobileForContact social-media-links-for-contact">
                     <SocialMediaLinksForMobile color="#FCEE21" />
                   </div>
             
