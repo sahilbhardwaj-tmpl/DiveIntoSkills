@@ -34,7 +34,7 @@
         font-size: 0.9em; 
       }
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
     .main-container{
         width: 100%;
         height: auto;
