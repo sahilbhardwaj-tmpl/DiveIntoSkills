@@ -34,10 +34,10 @@ function SearchBar() {
         `https://diveintoskill.onrender.com/similar/${query}`
       );
       setSearchResults(response.data);
-      console.log("no data");
+      // console.log("no data");
     } catch (error) {
-      toast.error("No result found");
-      console.error("Error fetching data:", error);
+      // toast.error("No result found");
+      // console.error("Error fetching data:", error);
     } finally {
       setIsLoading(false);
       setShowResultDialog(true);

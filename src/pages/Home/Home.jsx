@@ -26,10 +26,10 @@ function Home() {
           setLimitedBlogs(data);
         } else {
           toast.error("Failed to load blogs");
-          console.error("Failed to fetch data");
+          // console.error("Failed to fetch data");
         }
       } catch (error) {
-        console.error("Error:", error);
+        // console.error("Error:", error);
       }
     };
     if (limitedBlogs.length === 0) {
