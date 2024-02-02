@@ -16,8 +16,8 @@
 }
 
 .newsletter-popup {
-    width: 950px;
-    height: 300px;
+    max-width: 950px;
+    height: auto;
     display: flex;
     border-radius: 20px;
     background: linear-gradient(90deg, #183114 0%, #446129 100%);
@@ -28,7 +28,7 @@
     margin-top: 25px;
 }
 .email-image{
-    width: 330px;
+    max-width: 330px;
     height: auto;
 }
 .image-container img {
@@ -36,7 +36,7 @@
 }
 
 .text_container {
-    margin-top: 30px;
+    margin-top: 45px;
     padding: 20px;
 
 }
@@ -61,7 +61,7 @@
     align-items: center;
     margin-bottom: 10px;
     height: 45px;
-    border: 1px solid #FCEE21;
+    border: 3px solid #FCEE21;
     border-radius: 50px;
     overflow: hidden;
 }
@@ -73,7 +73,7 @@
     border: none;
     background: transparent;
     outline: none;
-    width: 280px;  
+    max-width: 280px;  
     font-size: 20px;
     background-clip: text;
     color: #FCEE21;
@@ -103,7 +103,7 @@
     .newsletter-popup {
         flex-direction: column;
         height: auto;
-        width: 800px;
+        
         
     }
     .text_container {
