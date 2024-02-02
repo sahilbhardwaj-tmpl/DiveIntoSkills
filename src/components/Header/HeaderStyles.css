@@ -56,7 +56,7 @@
   .hamsburger {
     display: none;
   }
-  @media screen and (min-width: 820px) and (max-width: 900px) {
+  @media screen and (min-width: 820px) and (max-width: 1024px) {
     .hamsburger {
       display: initial;
       padding-right: 25px;
